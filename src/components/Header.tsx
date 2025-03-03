@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex items-center">
           <h1 className="text-2xl font-bold text-primary">
             <NavLink to="/" className="flex items-center gap-2">
-              WiseLearn Academy
+              Cornelius Hope Academy
             </NavLink>
           </h1>
         </div>

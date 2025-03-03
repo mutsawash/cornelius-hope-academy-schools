@@ -27,10 +27,10 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Why Choose WiseLearn Academy</h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary">Why Choose Cornelius Hope Academy</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We provide a nurturing environment where students can explore their potential and excel academically.
           </p>
@@ -38,10 +38,10 @@ const Features = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="border border-gray-200 hover:shadow-md transition-shadow">
+            <Card key={index} className="border border-secondary hover:shadow-md transition-shadow bg-white">
               <CardHeader className="pb-2">
                 <div className="mb-2">{feature.icon}</div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
+                <CardTitle className="text-xl text-primary">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">{feature.description}</CardDescription>

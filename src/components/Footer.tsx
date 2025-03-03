@@ -8,18 +8,18 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">WiseLearn Academy</h3>
+            <h3 className="text-xl font-bold mb-4">Cornelius Hope Academy</h3>
             <p className="mb-4">
               Providing quality education and nurturing excellence since 2010.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-gray-300" aria-label="Facebook">
+              <a href="#" className="hover:text-secondary" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-gray-300" aria-label="Twitter">
+              <a href="#" className="hover:text-secondary" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-gray-300" aria-label="Instagram">
+              <a href="#" className="hover:text-secondary" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>
@@ -29,27 +29,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <NavLink to="/" className="hover:text-gray-300 transition-colors">
+                <NavLink to="/" className="hover:text-secondary transition-colors">
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about" className="hover:text-gray-300 transition-colors">
+                <NavLink to="/about" className="hover:text-secondary transition-colors">
                   About Us
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/academics" className="hover:text-gray-300 transition-colors">
+                <NavLink to="/academics" className="hover:text-secondary transition-colors">
                   Academics
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/admissions" className="hover:text-gray-300 transition-colors">
+                <NavLink to="/admissions" className="hover:text-secondary transition-colors">
                   Admissions
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className="hover:text-gray-300 transition-colors">
+                <NavLink to="/contact" className="hover:text-secondary transition-colors">
                   Contact
                 </NavLink>
               </li>
@@ -60,27 +60,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Programs</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a href="#" className="hover:text-secondary transition-colors">
                   Primary School
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a href="#" className="hover:text-secondary transition-colors">
                   Secondary School
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a href="#" className="hover:text-secondary transition-colors">
                   International Curriculum
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a href="#" className="hover:text-secondary transition-colors">
                   Extra-Curricular Activities
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a href="#" className="hover:text-secondary transition-colors">
                   Summer Programs
                 </a>
               </li>
@@ -100,14 +100,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="shrink-0" />
-                <span>info@wiselearn.edu</span>
+                <span>info@corneliushope.edu</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-10 pt-6 text-center">
-          <p>&copy; {new Date().getFullYear()} WiseLearn Academy. All rights reserved.</p>
+        <div className="border-t border-white/20 mt-10 pt-6 text-center">
+          <p>&copy; {new Date().getFullYear()} Cornelius Hope Academy. All rights reserved.</p>
         </div>
       </div>
     </footer>

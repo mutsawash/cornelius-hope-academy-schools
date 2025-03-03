@@ -3,19 +3,19 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <div className="relative bg-blue-50">
+    <div className="relative bg-secondary/40">
       <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             Nurturing Excellence, Inspiring Futures
           </h1>
           <p className="text-lg mb-8 text-gray-700">
-            WiseLearn Academy provides a high-quality education that empowers students to achieve 
+            Cornelius Hope Academy provides a high-quality education that empowers students to achieve 
             academic excellence and develop into well-rounded, responsible citizens.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg">Apply Now</Button>
-            <Button variant="outline" size="lg">Learn More</Button>
+            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">Learn More</Button>
           </div>
         </div>
         <div className="md:w-1/2">
