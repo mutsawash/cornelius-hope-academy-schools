@@ -11,6 +11,11 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <div className="bg-primary py-10 text-center">
+        <h1 className="text-5xl md:text-6xl font-bold text-white">
+          Welcome to Cornelius Hope Academy Schools
+        </h1>
+      </div>
       <main className="flex-grow">
         <Hero />
         <Features />
