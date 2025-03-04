@@ -6,6 +6,8 @@ import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import NewsEvents from "@/components/NewsEvents";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -15,6 +17,23 @@ const Index = () => {
         <h1 className="text-5xl md:text-6xl font-bold text-white">
           Welcome to Cornelius Hope Academy Schools
         </h1>
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <NavLink to="/academics">
+            <Button size="lg" variant="secondary" className="font-medium text-lg">
+              Preschool
+            </Button>
+          </NavLink>
+          <NavLink to="/academics">
+            <Button size="lg" variant="secondary" className="font-medium text-lg">
+              Primary School
+            </Button>
+          </NavLink>
+          <NavLink to="/academics">
+            <Button size="lg" variant="secondary" className="font-medium text-lg">
+              Secondary School
+            </Button>
+          </NavLink>
+        </div>
       </div>
       <main className="flex-grow">
         <Hero />
