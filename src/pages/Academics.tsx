@@ -26,12 +26,12 @@ const AcademicsPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow py-16 bg-white">
+      <main className="flex-grow py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-8 text-primary">Our Academic Programs</h1>
           
           <div className="mb-16">
-            <div className="bg-primary p-8 rounded-lg mb-10 text-white shadow-lg">
+            <div className="bg-primary p-8 rounded-lg mb-10 text-white shadow-lg border-2 border-accent">
               <h2 className="text-3xl font-semibold mb-6 text-white">Primary School</h2>
               <p className="text-lg mb-6">
                 Our Primary School curriculum is designed to build a strong foundation for lifelong learning. We focus on developing essential skills in literacy, numeracy, and critical thinking while fostering creativity and curiosity.
@@ -43,7 +43,7 @@ const AcademicsPage = () => {
               <h3 className="text-2xl font-semibold mb-4 text-white">Key Subjects</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {primarySubjects.map((subject, index) => (
-                  <Card key={index} className="bg-secondary text-primary hover:shadow-md transition-shadow">
+                  <Card key={index} className="bg-accent text-primary hover:shadow-lg transition-shadow border-2 border-white/20">
                     <CardHeader className="p-4 pb-2 flex flex-col items-center">
                       {subject.icon}
                     </CardHeader>
@@ -55,7 +55,7 @@ const AcademicsPage = () => {
               </div>
             </div>
             
-            <div className="bg-secondary p-8 rounded-lg border border-primary/20 shadow-lg">
+            <div className="bg-secondary p-8 rounded-lg border-2 border-primary/20 shadow-lg">
               <h2 className="text-3xl font-semibold mb-6 text-primary">Secondary School</h2>
               <p className="text-lg mb-6 text-primary">
                 Our Secondary School offers a rigorous academic program that prepares students for higher education and future careers. The curriculum is designed to challenge students intellectually while developing critical thinking, problem-solving, and leadership skills.
@@ -67,7 +67,7 @@ const AcademicsPage = () => {
               <h3 className="text-2xl font-semibold mb-4 text-primary">Key Subjects</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {secondarySubjects.map((subject, index) => (
-                  <Card key={index} className="bg-primary text-white hover:shadow-md transition-shadow">
+                  <Card key={index} className="bg-primary text-white hover:shadow-lg transition-shadow border-2 border-accent">
                     <CardHeader className="p-4 pb-2 flex flex-col items-center">
                       {subject.icon}
                     </CardHeader>
@@ -81,7 +81,7 @@ const AcademicsPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="border border-primary shadow-md">
+            <Card className="border-2 border-primary shadow-md bg-white">
               <CardHeader className="bg-primary text-white">
                 <CardTitle>Extra-Curricular Activities</CardTitle>
               </CardHeader>
@@ -97,8 +97,8 @@ const AcademicsPage = () => {
               </CardContent>
             </Card>
             
-            <Card className="border border-primary shadow-md">
-              <CardHeader className="bg-primary text-white">
+            <Card className="border-2 border-primary shadow-md bg-white">
+              <CardHeader className="bg-accent text-primary">
                 <CardTitle>Academic Support</CardTitle>
               </CardHeader>
               <CardContent className="bg-white mt-2">
