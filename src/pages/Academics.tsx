@@ -1,15 +1,14 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Code, Palette, Flask, Users, Globe, Calculator, Music } from "lucide-react";
+import { BookOpen, Code, Palette, Beaker, Users, Globe, Calculator, Music } from "lucide-react";
 
 const AcademicsPage = () => {
   const primarySubjects = [
     { icon: <BookOpen className="h-6 w-6 text-primary" />, name: "Language Arts" },
     { icon: <Calculator className="h-6 w-6 text-primary" />, name: "Mathematics" },
     { icon: <Globe className="h-6 w-6 text-primary" />, name: "Social Studies" },
-    { icon: <Flask className="h-6 w-6 text-primary" />, name: "Science" },
+    { icon: <Beaker className="h-6 w-6 text-primary" />, name: "Science" },
     { icon: <Palette className="h-6 w-6 text-primary" />, name: "Art & Craft" },
     { icon: <Music className="h-6 w-6 text-primary" />, name: "Music" },
   ];
@@ -17,7 +16,7 @@ const AcademicsPage = () => {
   const secondarySubjects = [
     { icon: <BookOpen className="h-6 w-6 text-primary" />, name: "Literature" },
     { icon: <Calculator className="h-6 w-6 text-primary" />, name: "Advanced Mathematics" },
-    { icon: <Flask className="h-6 w-6 text-primary" />, name: "Biology, Chemistry & Physics" },
+    { icon: <Beaker className="h-6 w-6 text-primary" />, name: "Biology, Chemistry & Physics" },
     { icon: <Globe className="h-6 w-6 text-primary" />, name: "Geography & History" },
     { icon: <Code className="h-6 w-6 text-primary" />, name: "Computer Science" },
     { icon: <Users className="h-6 w-6 text-primary" />, name: "Business Studies" },
