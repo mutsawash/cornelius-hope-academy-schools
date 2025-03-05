@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,7 +23,7 @@
     --muted: 42 38% 90%; /* Lighter beige */
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 45 100% 75%; /* Yellow */
+    --accent: 40 100% 50%; /* Deeper, brighter yellow */
     --accent-foreground: 135 45% 25%; /* Dark green */
 
     --destructive: 0 84.2% 60.2%;
