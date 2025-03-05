@@ -37,7 +37,7 @@ const Index = () => {
           <NavLink to="/academics">
             <Button 
               size="lg" 
-              className="font-medium text-lg bg-[#8F7E6E] text-white hover:bg-[#8F7E6E]/90"
+              className="font-medium text-lg bg-[#BE9E7F] text-white hover:bg-[#BE9E7F]/90"
             >
               Secondary School
             </Button>
