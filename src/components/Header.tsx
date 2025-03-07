@@ -11,6 +11,8 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
+
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto py-4 px-4 md:px-6 flex justify-between items-center">
@@ -39,7 +41,9 @@ const Header = () => {
           <NavLink to="/contact" className="font-medium hover:text-primary transition-colors">
             Contact
           </NavLink>
-          <Button>Enroll Now</Button>
+          <a href={enrollmentFormUrl} target="_blank" rel="noopener noreferrer">
+            <Button>Enroll Now</Button>
+          </a>
         </nav>
 
         {/* Mobile menu button */}
@@ -90,7 +94,9 @@ const Header = () => {
             >
               Contact
             </NavLink>
-            <Button className="w-full">Enroll Now</Button>
+            <a href={enrollmentFormUrl} target="_blank" rel="noopener noreferrer" className="w-full">
+              <Button className="w-full">Enroll Now</Button>
+            </a>
           </div>
         </div>
       )}

@@ -2,6 +2,8 @@
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
+  
   return (
     <div className="relative bg-secondary/40">
       <div className="container mx-auto px-4 py-16 md:py-24">
@@ -14,7 +16,9 @@ const Hero = () => {
             academic excellence and develop into well-rounded, responsible citizens.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg">Apply Now</Button>
+            <a href={enrollmentFormUrl} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">Apply Now</Button>
+            </a>
             <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">Learn More</Button>
           </div>
         </div>
