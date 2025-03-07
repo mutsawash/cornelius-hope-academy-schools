@@ -16,7 +16,7 @@ const Index = () => {
       <div className="bg-primary py-10 text-center">
         <div className="flex flex-col items-center justify-center">
           <img 
-            src="/lovable-uploads/1ea35b44-5930-467e-bd35-c43ac5215c8e.png" 
+            src="/lovable-uploads/7bc2a381-f1f3-42fd-a952-4ddaa51e7a93.png" 
             alt="Cornelius Hope Academy Logo" 
             className="h-24 w-auto mb-4 bg-white/90 p-1 rounded-md" 
           />

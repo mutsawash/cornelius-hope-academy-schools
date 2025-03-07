@@ -1,4 +1,3 @@
-
 import { NavLink } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
@@ -10,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/1ea35b44-5930-467e-bd35-c43ac5215c8e.png" 
+                src="/lovable-uploads/7bc2a381-f1f3-42fd-a952-4ddaa51e7a93.png" 
                 alt="Cornelius Hope Academy Logo" 
                 className="h-16 w-auto bg-white/90 p-1 rounded-md" 
               />

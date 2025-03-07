@@ -25,7 +25,7 @@ const Header = () => {
         <div className="flex items-center">
           <NavLink to="/" className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/1ea35b44-5930-467e-bd35-c43ac5215c8e.png" 
+              src="/lovable-uploads/7bc2a381-f1f3-42fd-a952-4ddaa51e7a93.png" 
               alt="Cornelius Hope Academy Logo" 
               className="h-12 w-auto" 
             />
