@@ -52,7 +52,7 @@ const ContactPage = () => {
                   <MapPin size={24} className="text-primary shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Address</h3>
-                    <p className="text-gray-600">123 Education Avenue, Wisdom City, WS 12345</p>
+                    <p className="text-gray-600">10 Good Hope Road, Westgate, Harare</p>
                   </div>
                 </div>
                 

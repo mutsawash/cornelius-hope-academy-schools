@@ -19,7 +19,7 @@ const Footer = () => {
               <a href="#" className="hover:text-secondary" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-secondary" aria-label="Instagram">
+              <a href="https://www.instagram.com/cornelius_hope_academy_/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>
@@ -92,7 +92,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="shrink-0 mt-1" />
-                <span>123 Education Avenue, Wisdom City, WS 12345</span>
+                <span>10 Good Hope Road, Westgate, Harare</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="shrink-0" />
