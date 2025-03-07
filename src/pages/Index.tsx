@@ -14,9 +14,16 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="bg-primary py-10 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-white">
-          Welcome to Cornelius Hope Academy Schools
-        </h1>
+        <div className="flex flex-col items-center justify-center">
+          <img 
+            src="/lovable-uploads/1ea35b44-5930-467e-bd35-c43ac5215c8e.png" 
+            alt="Cornelius Hope Academy Logo" 
+            className="h-24 w-auto mb-4 bg-white/90 p-1 rounded-md" 
+          />
+          <h1 className="text-5xl md:text-6xl font-bold text-white">
+            Welcome to Cornelius Hope Academy Schools
+          </h1>
+        </div>
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <NavLink to="/academics">
             <Button 

@@ -8,7 +8,14 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Cornelius Hope Academy</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="/lovable-uploads/1ea35b44-5930-467e-bd35-c43ac5215c8e.png" 
+                alt="Cornelius Hope Academy Logo" 
+                className="h-16 w-auto bg-white/90 p-1 rounded-md" 
+              />
+              <h3 className="text-xl font-bold">Cornelius Hope Academy</h3>
+            </div>
             <p className="mb-4">
               Providing quality education and nurturing excellence since 2010.
             </p>

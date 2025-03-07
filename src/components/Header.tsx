@@ -1,8 +1,14 @@
 
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,11 +23,16 @@ const Header = () => {
     <header className="bg-white sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto py-4 px-4 md:px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-primary">
-            <NavLink to="/" className="flex items-center gap-2">
+          <NavLink to="/" className="flex items-center gap-2">
+            <img 
+              src="/lovable-uploads/1ea35b44-5930-467e-bd35-c43ac5215c8e.png" 
+              alt="Cornelius Hope Academy Logo" 
+              className="h-12 w-auto" 
+            />
+            <h1 className="text-2xl font-bold text-primary hidden md:block">
               Cornelius Hope Academy
-            </NavLink>
-          </h1>
+            </h1>
+          </NavLink>
         </div>
 
         {/* Desktop Navigation */}
@@ -41,9 +52,45 @@ const Header = () => {
           <NavLink to="/contact" className="font-medium hover:text-primary transition-colors">
             Contact
           </NavLink>
-          <a href={enrollmentFormUrl} target="_blank" rel="noopener noreferrer">
-            <Button>Enroll Now</Button>
-          </a>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="flex items-center gap-1">
+                Enroll Now <ChevronDown size={16} />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-white">
+              <DropdownMenuItem className="cursor-pointer">
+                <a 
+                  href={`${enrollmentFormUrl}&entry.123456789=Preschool`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  Preschool
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a 
+                  href={`${enrollmentFormUrl}&entry.123456789=Primary`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  Primary School
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a 
+                  href={`${enrollmentFormUrl}&entry.123456789=Secondary`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  Secondary School
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
         {/* Mobile menu button */}
@@ -94,9 +141,35 @@ const Header = () => {
             >
               Contact
             </NavLink>
-            <a href={enrollmentFormUrl} target="_blank" rel="noopener noreferrer" className="w-full">
-              <Button className="w-full">Enroll Now</Button>
-            </a>
+            <div className="py-2">
+              <p className="font-medium mb-2">Enroll Now:</p>
+              <div className="flex flex-col space-y-2 pl-2">
+                <a 
+                  href={`${enrollmentFormUrl}&entry.123456789=Preschool`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-primary hover:underline"
+                >
+                  - Preschool
+                </a>
+                <a 
+                  href={`${enrollmentFormUrl}&entry.123456789=Primary`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-primary hover:underline"
+                >
+                  - Primary School
+                </a>
+                <a 
+                  href={`${enrollmentFormUrl}&entry.123456789=Secondary`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-primary hover:underline"
+                >
+                  - Secondary School
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}
