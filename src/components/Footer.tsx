@@ -1,37 +1,38 @@
+
 import { NavLink } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src="/lovable-uploads/7bc2a381-f1f3-42fd-a952-4ddaa51e7a93.png" 
                 alt="Cornelius Hope Academy Logo" 
-                className="h-16 w-auto bg-white/90 p-1 rounded-md" 
+                className="h-12 sm:h-14 md:h-16 w-auto bg-white/90 p-1 rounded-md" 
               />
-              <h3 className="text-xl font-bold">Cornelius Hope Academy</h3>
+              <h3 className="text-lg md:text-xl font-bold">Cornelius Hope Academy</h3>
             </div>
             <p className="mb-4">
               Providing quality education and nurturing excellence since 2010.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-secondary" aria-label="Facebook">
+              <a href="#" className="hover:text-secondary transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-secondary" aria-label="Twitter">
+              <a href="#" className="hover:text-secondary transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="https://www.instagram.com/cornelius_hope_academy_/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary" aria-label="Instagram">
+              <a href="https://www.instagram.com/cornelius_hope_academy_/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>
           </div>
 
-          <div>
+          <div className="mt-4 sm:mt-0">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -62,7 +63,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="mt-4 sm:mt-0">
             <h3 className="text-lg font-semibold mb-4">Programs</h3>
             <ul className="space-y-2">
               <li>
@@ -93,7 +94,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="mt-4 sm:mt-0">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
@@ -112,7 +113,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-10 pt-6 text-center">
+        <div className="border-t border-white/20 mt-8 md:mt-10 pt-6 text-center text-sm md:text-base">
           <p>&copy; {new Date().getFullYear()} Cornelius Hope Academy. All rights reserved.</p>
         </div>
       </div>

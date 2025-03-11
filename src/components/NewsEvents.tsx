@@ -22,27 +22,27 @@ const NewsEvents = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 md:py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">News & Upcoming Events</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Stay updated with the latest happenings and upcoming events at WiseLearn Academy.
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">News & Upcoming Events</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+            Stay updated with the latest happenings and upcoming events at Cornelius Hope Academy.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {events.map((event, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-2">
+              <CardHeader className="pb-2 px-4 pt-4 md:px-6 md:pt-6">
                 <div className="flex items-center gap-2 text-primary mb-2">
-                  <Calendar className="h-5 w-5" />
-                  <span className="text-sm">{event.date}</span>
+                  <Calendar className="h-4 w-4 md:h-5 md:w-5" />
+                  <span className="text-xs md:text-sm">{event.date}</span>
                 </div>
-                <CardTitle className="text-xl">{event.title}</CardTitle>
+                <CardTitle className="text-lg md:text-xl">{event.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">{event.description}</p>
+              <CardContent className="px-4 pb-4 md:px-6 md:pb-6">
+                <p className="text-gray-600 text-sm md:text-base">{event.description}</p>
               </CardContent>
             </Card>
           ))}

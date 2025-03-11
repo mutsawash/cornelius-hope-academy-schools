@@ -13,19 +13,19 @@ const Hero = () => {
   
   return (
     <div className="relative bg-secondary/40">
-      <div className="container mx-auto px-4 py-16 md:py-24">
+      <div className="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-24">
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 md:mb-6">
             Nurturing Excellence, Inspiring Futures
           </h1>
-          <p className="text-lg mb-8 text-gray-700">
+          <p className="text-base sm:text-lg mb-6 md:mb-8 text-gray-700 px-2">
             Cornelius Hope Academy provides a high-quality education that empowers students to achieve 
             academic excellence and develop into well-rounded, responsible citizens.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button size="lg" className="flex items-center gap-1">
+                <Button size="default" className="flex items-center gap-1 text-sm sm:text-base">
                   Apply Now <ChevronDown size={16} />
                 </Button>
               </DropdownMenuTrigger>
@@ -62,12 +62,12 @@ const Hero = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">Learn More</Button>
+            <Button variant="outline" size="default" className="border-primary text-primary hover:bg-primary/10 text-sm sm:text-base">Learn More</Button>
           </div>
         </div>
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 bg-gradient-to-t from-white to-transparent"></div>
     </div>
   );
 };

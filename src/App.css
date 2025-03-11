@@ -1,7 +1,7 @@
+
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -39,4 +39,31 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  .card {
+    padding: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
+  
+  .card {
+    padding: 1em;
+  }
+}
+
+/* Prevent content from overflowing on mobile */
+img {
+  max-width: 100%;
+  height: auto;
 }
