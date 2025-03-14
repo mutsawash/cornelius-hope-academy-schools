@@ -13,47 +13,55 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
             <div>
               <p className="text-lg mb-6">
-                Cornelius Hope Academy was founded with a vision to provide exceptional education that nurtures both academic excellence and character development. Since our establishment, we have been committed to creating a learning environment where students can discover their potential and develop the skills needed for success in an ever-changing world.
+                Cornelius Hope Academy is a Christian private school located in Goodhope suburb, about 5 kilometers from Westgate Round along Nemakonde (former Lomagundi). We are situated about 8km from the Cyber city.
               </p>
               <p className="text-lg mb-6">
-                Our approach combines traditional educational values with innovative teaching methods, ensuring our students receive a well-rounded education that prepares them for future challenges.
+                Our primary school was established in 2007. It has grown over the years with the establishment of the secondary school in 2010. The schools have become a force to reckon with in the fields of both academics and sports.
+              </p>
+              <p className="text-lg mb-6">
+                We have both day and boarding facilities for secondary school that is focused on developing a holistic graduate. We offer not only academic development but we also offer spiritual, physical and psycho-social support to our learners. We are a one-stop school from ECD to Form 4. The health needs of our learners are also taken care of by qualified medical staff at our clinic.
               </p>
             </div>
             <div className="bg-secondary/20 p-8 rounded-lg">
-              <h2 className="text-2xl font-semibold mb-4 text-primary">Our Mission</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-primary">Our Vision</h2>
               <p className="mb-6">
-                To provide a supportive and challenging educational environment that encourages students to achieve their full potential and become responsible, contributing members of society.
+                To produce graduates who are responsive to the needs of the nation.
               </p>
               
-              <h2 className="text-2xl font-semibold mb-4 text-primary">Our Vision</h2>
-              <p>
-                To be recognized as a center of educational excellence, producing well-rounded individuals who are academically prepared, ethically sound, and ready to make positive contributions to the global community.
+              <h2 className="text-2xl font-semibold mb-4 text-primary">Our Mission</h2>
+              <p className="mb-6">
+                Cornelius Hope Academy schools seek to offer education of the highest quality and relevance to the children thus enabling them to develop to their full potential academically, physically, socially, emotionally and spiritually.
+              </p>
+              
+              <h2 className="text-2xl font-semibold mb-4 text-primary">To Become</h2>
+              <p className="mb-6">
+                Competent, self-reliant and acceptable members of the global society.
               </p>
             </div>
           </div>
           
           <div className="mb-12">
-            <h2 className="text-3xl font-semibold mb-6 text-primary">Our Schools</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md border border-secondary">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">Primary School</h3>
-                <p className="mb-4">
-                  Our Primary School provides a strong foundation for young learners from ages 5-12. The curriculum focuses on building essential skills in literacy, numeracy, and critical thinking while nurturing curiosity and creativity.
-                </p>
-                <p>
-                  Through a child-centered approach, we ensure that each student receives personalized attention and support to thrive academically and socially.
-                </p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-lg shadow-md border border-secondary">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">Secondary School</h3>
-                <p className="mb-4">
-                  The Secondary School at Cornelius Hope Academy offers a comprehensive education for students aged 13-18. Our rigorous academic program prepares students for higher education while developing critical thinking, leadership, and collaboration skills.
-                </p>
-                <p>
-                  Students benefit from specialized instruction in various subjects, advanced placement opportunities, and a wide range of extracurricular activities that complement their academic studies.
-                </p>
-              </div>
+            <h2 className="text-3xl font-semibold mb-6 text-primary">Core Values</h2>
+            <div className="bg-white p-8 rounded-lg shadow-md border border-secondary">
+              <p className="text-lg">
+                Professionalism, team work, honesty, transparency, commitment, fairness, compassion, self-discipline, continuous learning, customer satisfaction, innovativeness and optimal resource utilization.
+              </p>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-md border border-secondary">
+              <h3 className="text-2xl font-semibold mb-4 text-primary">School Clinic</h3>
+              <p className="mb-4">
+                Cornelius Hope Academy offers onsite medical services to its learners. Our medical staff supervises environmental cleanliness that includes ablution facilities. They also offer health talks to all learners.
+              </p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-md border border-secondary">
+              <h3 className="text-2xl font-semibold mb-4 text-primary">Discipleship and Child Safeguarding</h3>
+              <p className="mb-4">
+                The school develops learners spiritually through Christian discipleship programmes planned and led by full-time pastors. We have a department led by a qualified social worker that deals with child safeguarding issues.
+              </p>
             </div>
           </div>
         </div>

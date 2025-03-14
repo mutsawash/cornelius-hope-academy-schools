@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
                 className="rounded-lg shadow-xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg hidden md:block">
-                <p className="font-bold text-2xl">Est. 2010</p>
+                <p className="font-bold text-2xl">Est. 2007</p>
                 <p>Excellence in Education</p>
               </div>
             </div>
@@ -23,17 +24,14 @@ const About = () => {
           <div className="md:w-1/2 md:pl-16">
             <h2 className="text-3xl font-bold mb-6 text-primary">About Our School</h2>
             <p className="text-gray-600 mb-6">
-              Founded in 2010, Cornelius Hope Academy has established itself as a leading educational 
-              institution committed to academic excellence and character development. Our mission 
-              is to provide a stimulating learning environment that encourages critical thinking, 
-              creativity, and personal growth.
+              Cornelius Hope Academy is a Christian private school located in Goodhope suburb, about 5 kilometers from Westgate Round along Nemakonde (former Lomagundi). Our primary school was established in 2007, with the secondary school following in 2010.
             </p>
             <p className="text-gray-600 mb-6">
-              We believe in nurturing each student's unique talents and abilities, preparing them 
-              not just for academic success but for life beyond the classroom. Our dedicated teachers 
-              and state-of-the-art facilities create the perfect setting for students to thrive.
+              We offer both day and boarding facilities for secondary school that focus on developing holistic graduates. We provide not only academic development but also spiritual, physical, and psycho-social support to our learners. We are a one-stop school from ECD to Form 4.
             </p>
-            <Button>Learn More About Us</Button>
+            <NavLink to="/about">
+              <Button>Learn More About Us</Button>
+            </NavLink>
           </div>
         </div>
       </div>

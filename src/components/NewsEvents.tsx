@@ -7,17 +7,17 @@ const NewsEvents = () => {
     {
       title: "Annual Sports Day",
       date: "June 15, 2024",
-      description: "Join us for a day of athletic competitions and team spirit."
+      description: "Join us for competitions in cricket, hockey, basketball, swimming, tennis, volleyball, soccer, netball, handball and athletics."
     },
     {
-      title: "Science Fair",
+      title: "Arts and Clubs Showcase",
       date: "July 10, 2024",
-      description: "Students showcase their innovative science projects and experiments."
+      description: "Students showcase their talents in debate, drama, dance, quiz, spelling bee, music, choir, and public speaking."
     },
     {
       title: "Parent-Teacher Conference",
       date: "August 5, 2024",
-      description: "An opportunity to discuss your child's progress and development."
+      description: "An opportunity to discuss your child's progress and development with our dedicated teachers."
     }
   ];
 

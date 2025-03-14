@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,8 +20,7 @@ const Hero = () => {
             Nurturing Excellence, Inspiring Futures
           </h1>
           <p className="text-base sm:text-lg mb-6 md:mb-8 text-gray-700 px-2">
-            Cornelius Hope Academy provides a high-quality education that empowers students to achieve 
-            academic excellence and develop into well-rounded, responsible citizens.
+            Our vision is to produce graduates who are responsive to the needs of the nation, becoming competent, self-reliant and acceptable members of the global society.
           </p>
           <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
             <DropdownMenu>
@@ -30,16 +30,6 @@ const Hero = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-white">
-                <DropdownMenuItem className="cursor-pointer">
-                  <a 
-                    href={`${enrollmentFormUrl}&entry.123456789=Preschool`} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-full"
-                  >
-                    Preschool
-                  </a>
-                </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
                   <a 
                     href={`${enrollmentFormUrl}&entry.123456789=Primary`} 
@@ -62,7 +52,9 @@ const Hero = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant="outline" size="default" className="border-primary text-primary hover:bg-primary/10 text-sm sm:text-base">Learn More</Button>
+            <NavLink to="/about">
+              <Button variant="outline" size="default" className="border-primary text-primary hover:bg-primary/10 text-sm sm:text-base">Learn More</Button>
+            </NavLink>
           </div>
         </div>
       </div>

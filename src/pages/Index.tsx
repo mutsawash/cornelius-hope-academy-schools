@@ -24,16 +24,11 @@ const Index = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white px-2">
               Welcome to Cornelius Hope Academy Schools
             </h1>
+            <p className="text-white mt-4 max-w-3xl mx-auto">
+              A Christian private school established in 2007, offering quality education from ECD to Form 4
+            </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-6">
-            <NavLink to="/academics">
-              <Button 
-                size="lg" 
-                className="font-medium text-base md:text-lg bg-accent text-primary hover:bg-accent/90"
-              >
-                Preschool
-              </Button>
-            </NavLink>
             <NavLink to="/academics">
               <Button 
                 size="lg" 

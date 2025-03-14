@@ -1,28 +1,28 @@
 
-import { Book, Users, Award, Clock } from "lucide-react";
+import { BookOpen, Users, Award, Shield } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Features = () => {
   const features = [
     {
-      icon: <Book className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
-      title: "Comprehensive Curriculum",
-      description: "Our curriculum is designed to challenge students and develop critical thinking skills."
+      icon: <BookOpen className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
+      title: "Quality Curriculum",
+      description: "We offer both ZIMSEC and Cambridge curricula with a comprehensive range of subjects."
     },
     {
       icon: <Users className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
-      title: "Expert Faculty",
-      description: "Our teachers are experienced professionals dedicated to student success."
+      title: "Holistic Development",
+      description: "We focus on academic, spiritual, physical, and psycho-social development of our students."
     },
     {
       icon: <Award className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
       title: "Excellence in Education",
-      description: "We maintain high academic standards and celebrate student achievements."
+      description: "Our schools have become a force to reckon with in the fields of academics and sports."
     },
     {
-      icon: <Clock className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
-      title: "Modern Facilities",
-      description: "State-of-the-art classrooms, labs, and recreational spaces for optimal learning."
+      icon: <Shield className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
+      title: "Student Care",
+      description: "On-site medical services and child safeguarding programs ensure student wellbeing."
     }
   ];
 
@@ -32,7 +32,7 @@ const Features = () => {
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-primary">Why Choose Cornelius Hope Academy</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-            We provide a nurturing environment where students can explore their potential and excel academically.
+            Our mission is to offer education of the highest quality and relevance, enabling students to develop to their full potential.
           </p>
         </div>
 
