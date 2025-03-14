@@ -52,23 +52,31 @@ const ContactPage = () => {
                   <MapPin size={24} className="text-primary shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Address</h3>
-                    <p className="text-gray-600">Goodhope suburb, about 5 kilometers from Westgate Round along Nemakonde (former Lomagundi), about 8km from the Cyber city, Harare</p>
+                    <p className="text-gray-600">P.O. Box WGT 412 WESTGATE, Harare</p>
+                    <p className="text-gray-600 mt-1">Goodhope suburb, near Westgate Round along Nemakonde (former Lomagundi), Harare</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <Phone size={24} className="text-primary shrink-0" />
+                <div className="flex items-start space-x-4">
+                  <Phone size={24} className="text-primary shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <div className="text-gray-600 space-y-1">
+                      <a href="tel:+0242003287" className="block hover:text-primary">(0242) 00328 97</a>
+                      <a href="tel:+263772855611" className="block hover:text-primary">0772 85611</a>
+                      <a href="tel:+263772585706" className="block hover:text-primary">0772 585 706</a>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <Mail size={24} className="text-primary shrink-0" />
+                <div className="flex items-start space-x-4">
+                  <Mail size={24} className="text-primary shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-gray-600">info@corneliushope.edu</p>
+                    <div className="text-gray-600 space-y-1">
+                      <a href="mailto:chaps-primaryschool@gmail.com" className="block hover:text-primary break-words">chaps-primaryschool@gmail.com</a>
+                      <a href="mailto:chassecondary@gmail.com" className="block hover:text-primary break-words">chassecondary@gmail.com</a>
+                    </div>
                   </div>
                 </div>
               </div>

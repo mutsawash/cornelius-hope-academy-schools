@@ -99,15 +99,22 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="shrink-0 mt-1" />
-                <span>Goodhope suburb, near Westgate Round along Nemakonde (former Lomagundi), Harare</span>
+                <span>P.O. Box WGT 412 WESTGATE, Harare</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone size={20} className="shrink-0" />
-                <span>+1 (555) 123-4567</span>
+              <li className="flex items-start space-x-3">
+                <Phone size={20} className="shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <a href="tel:+0242003287" className="hover:text-secondary transition-colors">(0242) 00328 97</a>
+                  <a href="tel:+263772855611" className="hover:text-secondary transition-colors">0772 85611</a>
+                  <a href="tel:+263772585706" className="hover:text-secondary transition-colors">0772 585 706</a>
+                </div>
               </li>
-              <li className="flex items-center space-x-3">
-                <Mail size={20} className="shrink-0" />
-                <span>info@corneliushope.edu</span>
+              <li className="flex items-start space-x-3">
+                <Mail size={20} className="shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <a href="mailto:chaps-primaryschool@gmail.com" className="hover:text-secondary transition-colors break-all">chaps-primaryschool@gmail.com</a>
+                  <a href="mailto:chassecondary@gmail.com" className="hover:text-secondary transition-colors break-all">chassecondary@gmail.com</a>
+                </div>
               </li>
             </ul>
           </div>
