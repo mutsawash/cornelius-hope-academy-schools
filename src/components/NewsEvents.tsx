@@ -22,7 +22,7 @@ const NewsEvents = () => {
   ];
 
   return (
-    <section className="py-10 md:py-16 bg-white/80 backdrop-blur-sm">
+    <section className="py-10 md:py-16 bg-white/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">News & Upcoming Events</h2>
@@ -33,7 +33,7 @@ const NewsEvents = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {events.map((event, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow bg-white/90">
+            <Card key={index} className="hover:shadow-lg transition-shadow bg-white">
               <CardHeader className="pb-2 px-4 pt-4 md:px-6 md:pt-6">
                 <div className="flex items-center gap-2 text-primary mb-2">
                   <Calendar className="h-4 w-4 md:h-5 md:w-5" />

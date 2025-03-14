@@ -20,6 +20,7 @@ interface HomeImageCarouselProps {
 
 const HomeImageCarousel = ({ sectionId }: HomeImageCarouselProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [api, setApi] = useState<any>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -42,26 +43,24 @@ const HomeImageCarousel = ({ sectionId }: HomeImageCarouselProps) => {
     };
   }, [sectionId]);
   
-  // Select two random images from the array
-  const randomIndex1 = Math.floor(Math.random() * schoolImages.length);
-  let randomIndex2 = Math.floor(Math.random() * schoolImages.length);
-  
-  // Ensure the second image is different from the first
-  while (randomIndex2 === randomIndex1) {
-    randomIndex2 = Math.floor(Math.random() * schoolImages.length);
-  }
-  
-  const selectedImages = [
-    schoolImages[randomIndex1],
-    schoolImages[randomIndex2]
-  ];
+  // Auto rotation
+  useEffect(() => {
+    if (!api || !isVisible) return;
+    
+    // Start a timer to rotate the carousel
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 5000); // Change image every 5 seconds
+    
+    return () => clearInterval(interval);
+  }, [api, isVisible]);
   
   return (
-    <div className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-1000" 
-      style={{ opacity: isVisible ? 0.15 : 0 }}>
-      <Carousel className="w-full h-full" opts={{ loop: true, duration: 40 }} autoPlay={true}>
+    <div className="absolute inset-0 -z-10"
+      style={{ opacity: isVisible ? 1 : 0, transition: "opacity 1000ms" }}>
+      <Carousel className="w-full h-full" opts={{ loop: true, duration: 1000 }} setApi={setApi}>
         <CarouselContent className="h-full">
-          {selectedImages.map((img, index) => (
+          {schoolImages.map((img, index) => (
             <CarouselItem key={index} className="h-full">
               <img 
                 src={img} 
@@ -72,6 +71,7 @@ const HomeImageCarousel = ({ sectionId }: HomeImageCarouselProps) => {
           ))}
         </CarouselContent>
       </Carousel>
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
     </div>
   );
 };
