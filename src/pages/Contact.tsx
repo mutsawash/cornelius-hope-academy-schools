@@ -52,7 +52,7 @@ const ContactPage = () => {
                   <MapPin size={24} className="text-primary shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Address</h3>
-                    <p className="text-gray-600">10 Good Hope Road, Westgate, Harare</p>
+                    <p className="text-gray-600">Goodhope suburb, about 5 kilometers from Westgate Round along Nemakonde (former Lomagundi), about 8km from the Cyber city, Harare</p>
                   </div>
                 </div>
                 
@@ -68,7 +68,7 @@ const ContactPage = () => {
                   <Mail size={24} className="text-primary shrink-0" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-gray-600">info@wiselearn.edu</p>
+                    <p className="text-gray-600">info@corneliushope.edu</p>
                   </div>
                 </div>
               </div>

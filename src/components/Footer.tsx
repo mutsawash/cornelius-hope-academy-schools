@@ -17,7 +17,7 @@ const Footer = () => {
               <h3 className="text-lg md:text-xl font-bold">Cornelius Hope Academy</h3>
             </div>
             <p className="mb-4">
-              Providing quality education and nurturing excellence since 2010.
+              Providing quality education and nurturing excellence since 2007.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-secondary transition-colors" aria-label="Facebook">
@@ -78,17 +78,17 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="hover:text-secondary transition-colors">
-                  International Curriculum
+                  Cambridge Curriculum
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-secondary transition-colors">
-                  Extra-Curricular Activities
+                  ZIMSEC Curriculum
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-secondary transition-colors">
-                  Summer Programs
+                  Sports & Clubs
                 </a>
               </li>
             </ul>
@@ -99,7 +99,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="shrink-0 mt-1" />
-                <span>10 Good Hope Road, Westgate, Harare</span>
+                <span>Goodhope suburb, near Westgate Round along Nemakonde (former Lomagundi), Harare</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="shrink-0" />
