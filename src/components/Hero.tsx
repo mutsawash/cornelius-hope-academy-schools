@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -13,13 +20,56 @@ const Hero = () => {
   const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
   
   return (
-    <div className="relative bg-secondary/40">
-      <div className="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-24">
+    <div className="relative">
+      <div className="absolute inset-0 -z-10">
+        <Carousel className="w-full h-full" opts={{ loop: true, duration: 30 }} autoPlay={true}>
+          <CarouselContent className="h-full">
+            <CarouselItem className="h-full">
+              <img 
+                src="/lovable-uploads/c3471d45-23a1-4735-8de2-a28e3661fa6c.png" 
+                alt="Student in school uniform" 
+                className="w-full h-full object-cover"
+              />
+            </CarouselItem>
+            <CarouselItem className="h-full">
+              <img 
+                src="/lovable-uploads/b60944a1-00b0-4ee2-a9f2-fab022c0374d.png" 
+                alt="Prefect in school uniform" 
+                className="w-full h-full object-cover"
+              />
+            </CarouselItem>
+            <CarouselItem className="h-full">
+              <img 
+                src="/lovable-uploads/39470031-790d-444a-a833-a445dc2f57da.png" 
+                alt="Student representative" 
+                className="w-full h-full object-cover"
+              />
+            </CarouselItem>
+            <CarouselItem className="h-full">
+              <img 
+                src="/lovable-uploads/d3550c47-462b-4532-8db3-9aac902597e0.png" 
+                alt="School leadership team" 
+                className="w-full h-full object-cover"
+              />
+            </CarouselItem>
+            <CarouselItem className="h-full">
+              <img 
+                src="/lovable-uploads/38b18dfa-9b9f-4d6b-80b4-633f4eef3b58.png" 
+                alt="Student prefects with teacher" 
+                className="w-full h-full object-cover"
+              />
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-20 sm:py-24 md:py-28 lg:py-32 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 md:mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6">
             Nurturing Excellence, Inspiring Futures
           </h1>
-          <p className="text-base sm:text-lg mb-6 md:mb-8 text-gray-700 px-2">
+          <p className="text-base sm:text-lg mb-6 md:mb-8 text-white/90 px-2">
             Our vision is to produce graduates who are responsive to the needs of the nation, becoming competent, self-reliant and acceptable members of the global society.
           </p>
           <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
@@ -53,7 +103,7 @@ const Hero = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <NavLink to="/about">
-              <Button variant="outline" size="default" className="border-primary text-primary hover:bg-primary/10 text-sm sm:text-base">Learn More</Button>
+              <Button variant="outline" size="default" className="border-white text-white hover:bg-white/10 text-sm sm:text-base">Learn More</Button>
             </NavLink>
           </div>
         </div>

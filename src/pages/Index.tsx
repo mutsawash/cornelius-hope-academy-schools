@@ -8,13 +8,15 @@ import NewsEvents from "@/components/NewsEvents";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
+import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="bg-primary py-8 md:py-10 text-center">
-        <div className="container mx-auto px-4">
+      <div className="bg-primary py-8 md:py-10 text-center relative">
+        <HomeImageCarousel sectionId="header-banner" />
+        <div id="header-banner" className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center justify-center">
             <img 
               src="/lovable-uploads/7bc2a381-f1f3-42fd-a952-4ddaa51e7a93.png" 
@@ -50,10 +52,26 @@ const Index = () => {
       </div>
       <main className="flex-grow">
         <Hero />
-        <Features />
-        <About />
-        <Testimonials />
-        <NewsEvents />
+        
+        <section id="features-section" className="relative">
+          <HomeImageCarousel sectionId="features-section" />
+          <Features />
+        </section>
+        
+        <section id="about-section" className="relative">
+          <HomeImageCarousel sectionId="about-section" />
+          <About />
+        </section>
+        
+        <section id="testimonials-section" className="relative">
+          <HomeImageCarousel sectionId="testimonials-section" />
+          <Testimonials />
+        </section>
+        
+        <section id="news-section" className="relative">
+          <HomeImageCarousel sectionId="news-section" />
+          <NewsEvents />
+        </section>
       </main>
       <Footer />
     </div>
