@@ -6,7 +6,8 @@ import {
   CarouselItem
 } from "@/components/ui/carousel";
 
-const schoolImages = [
+// Default images from the homepage
+const defaultImages = [
   "/lovable-uploads/c3471d45-23a1-4735-8de2-a28e3661fa6c.png",
   "/lovable-uploads/b60944a1-00b0-4ee2-a9f2-fab022c0374d.png",
   "/lovable-uploads/39470031-790d-444a-a833-a445dc2f57da.png",
@@ -16,9 +17,15 @@ const schoolImages = [
 
 interface HomeImageCarouselProps {
   sectionId: string;
+  images?: string[];
+  className?: string;
 }
 
-const HomeImageCarousel = ({ sectionId }: HomeImageCarouselProps) => {
+const HomeImageCarousel = ({ 
+  sectionId, 
+  images = defaultImages, 
+  className = "absolute inset-0 -z-10" 
+}: HomeImageCarouselProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [api, setApi] = useState<any>(null);
   
@@ -56,11 +63,11 @@ const HomeImageCarousel = ({ sectionId }: HomeImageCarouselProps) => {
   }, [api, isVisible]);
   
   return (
-    <div className="absolute inset-0 -z-10"
+    <div className={className}
       style={{ opacity: isVisible ? 1 : 0, transition: "opacity 1000ms" }}>
       <Carousel className="w-full h-full" opts={{ loop: true, duration: 1000 }} setApi={setApi}>
         <CarouselContent className="h-full">
-          {schoolImages.map((img, index) => (
+          {images.map((img, index) => (
             <CarouselItem key={index} className="h-full">
               <img 
                 src={img} 
@@ -71,7 +78,6 @@ const HomeImageCarousel = ({ sectionId }: HomeImageCarouselProps) => {
           ))}
         </CarouselContent>
       </Carousel>
-      {/* Removed the semi-transparent overlay */}
     </div>
   );
 };

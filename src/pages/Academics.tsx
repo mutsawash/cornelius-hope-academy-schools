@@ -3,6 +3,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Code, Palette, Beaker, Users, Globe, Calculator, Music } from "lucide-react";
+import HomeImageCarousel from "@/components/HomeImageCarousel";
+
+// The images we want to display in the secondary school section
+const secondarySchoolImages = [
+  "/lovable-uploads/c3471d45-23a1-4735-8de2-a28e3661fa6c.png",
+  "/lovable-uploads/b60944a1-00b0-4ee2-a9f2-fab022c0374d.png",
+  "/lovable-uploads/39470031-790d-444a-a833-a445dc2f57da.png",
+  "/lovable-uploads/d3550c47-462b-4532-8db3-9aac902597e0.png",
+  "/lovable-uploads/38b18dfa-9b9f-4d6b-80b4-633f4eef3b58.png"
+];
 
 const AcademicsPage = () => {
   return (
@@ -128,7 +138,16 @@ const AcademicsPage = () => {
               </div>
             </div>
             
-            <div className="bg-secondary p-8 rounded-lg border-2 border-primary/20 shadow-lg">
+            <div id="secondary-school-section" className="bg-secondary p-8 rounded-lg border-2 border-primary/20 shadow-lg relative">
+              {/* Image carousel in secondary school section */}
+              <div className="h-[400px] mb-6 rounded-lg overflow-hidden relative">
+                <HomeImageCarousel 
+                  sectionId="secondary-school-section" 
+                  images={secondarySchoolImages}
+                  className="relative" 
+                />
+              </div>
+              
               <h2 className="text-3xl font-semibold mb-6 text-primary">Secondary School</h2>
               <p className="text-lg mb-6 text-primary">
                 We offer both Cambridge and ZIMSEC Curriculum, providing a comprehensive education to prepare students for future success.

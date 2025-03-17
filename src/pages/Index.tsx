@@ -39,7 +39,7 @@ const Index = () => {
                 Primary School
               </Button>
             </NavLink>
-            <NavLink to="/academics">
+            <NavLink to="/academics#secondary-school-section">
               <Button 
                 size="lg" 
                 className="font-medium text-base md:text-lg bg-[#BE9E7F] text-white hover:bg-[#BE9E7F]/90"
@@ -52,26 +52,10 @@ const Index = () => {
       </div>
       <main className="flex-grow">
         <Hero />
-        
-        <section id="features-section" className="relative">
-          <HomeImageCarousel sectionId="features-section" />
-          <Features />
-        </section>
-        
-        <section id="about-section" className="relative">
-          <HomeImageCarousel sectionId="about-section" />
-          <About />
-        </section>
-        
-        <section id="testimonials-section" className="relative">
-          <HomeImageCarousel sectionId="testimonials-section" />
-          <Testimonials />
-        </section>
-        
-        <section id="news-section" className="relative">
-          <HomeImageCarousel sectionId="news-section" />
-          <NewsEvents />
-        </section>
+        <Features />
+        <About />
+        <Testimonials />
+        <NewsEvents />
       </main>
       <Footer />
     </div>
