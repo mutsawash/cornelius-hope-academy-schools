@@ -65,13 +65,13 @@ const HomeImageCarousel = ({ sectionId }: HomeImageCarouselProps) => {
               <img 
                 src={img} 
                 alt="School students" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain max-h-[90vh]"
               />
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+      {/* Removed the semi-transparent overlay */}
     </div>
   );
 };

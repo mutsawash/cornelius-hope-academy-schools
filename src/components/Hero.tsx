@@ -51,13 +51,13 @@ const Hero = () => {
                 <img 
                   src={img} 
                   alt="School scene" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain max-h-[90vh]" 
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
       
       <div className="container mx-auto px-4 py-20 sm:py-24 md:py-28 lg:py-32 relative z-10">
