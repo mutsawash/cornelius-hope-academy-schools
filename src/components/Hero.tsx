@@ -14,51 +14,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-const schoolImages = [
-  "/lovable-uploads/c3471d45-23a1-4735-8de2-a28e3661fa6c.png",
-  "/lovable-uploads/b60944a1-00b0-4ee2-a9f2-fab022c0374d.png",
-  "/lovable-uploads/39470031-790d-444a-a833-a445dc2f57da.png",
-  "/lovable-uploads/d3550c47-462b-4532-8db3-9aac902597e0.png",
-  "/lovable-uploads/38b18dfa-9b9f-4d6b-80b4-633f4eef3b58.png"
-];
+import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const Hero = () => {
   const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
-  const [api, setApi] = useState<any>(null);
-  
-  // Auto rotation
-  useEffect(() => {
-    if (!api) return;
-    
-    // Start a timer to rotate the carousel
-    const interval = setInterval(() => {
-      api.scrollNext();
-    }, 5000); // Change image every 5 seconds
-    
-    return () => clearInterval(interval);
-  }, [api]);
   
   return (
     <div className="relative">
-      <div className="absolute inset-0 -z-10">
-        <Carousel className="w-full h-full" opts={{ loop: true, duration: 1000 }} setApi={setApi}>
-          <CarouselContent className="h-full">
-            {schoolImages.map((img, index) => (
-              <CarouselItem key={index} className="h-full">
-                <img 
-                  src={img} 
-                  alt="School scene" 
-                  className="w-full h-full object-contain max-h-[90vh]" 
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-        <div className="absolute inset-0 bg-black/30"></div>
-      </div>
+      <HomeImageCarousel sectionId="hero-section" className="absolute inset-0 -z-10" />
+      <div className="absolute inset-0 bg-black/30 -z-10"></div>
       
-      <div className="container mx-auto px-4 py-20 sm:py-24 md:py-28 lg:py-32 relative z-10">
+      <div id="hero-section" className="container mx-auto px-4 py-20 sm:py-24 md:py-28 lg:py-32 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6">
             Nurturing Excellence, Inspiring Futures

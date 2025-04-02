@@ -23,11 +23,27 @@ interface HomeImageCarouselProps {
 
 const HomeImageCarousel = ({ 
   sectionId, 
-  images = defaultImages, 
+  images: providedImages, 
   className = "absolute inset-0 -z-10" 
 }: HomeImageCarouselProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [api, setApi] = useState<any>(null);
+  const [galleryImages, setGalleryImages] = useState<string[]>([]);
+  
+  // Load images from gallery
+  useEffect(() => {
+    const storedImages = localStorage.getItem("galleryImages");
+    if (storedImages) {
+      const parsedImages = JSON.parse(storedImages);
+      const imageUrls = parsedImages.map((img: any) => img.url);
+      setGalleryImages(imageUrls);
+    }
+  }, []);
+  
+  // Combine gallery images with default images or provided images
+  const displayImages = galleryImages.length > 0 
+    ? [...galleryImages, ...(providedImages || defaultImages)]
+    : (providedImages || defaultImages);
   
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -67,7 +83,7 @@ const HomeImageCarousel = ({
       style={{ opacity: isVisible ? 1 : 0, transition: "opacity 1000ms" }}>
       <Carousel className="w-full h-full" opts={{ loop: true, duration: 1000 }} setApi={setApi}>
         <CarouselContent className="h-full">
-          {images.map((img, index) => (
+          {displayImages.map((img, index) => (
             <CarouselItem key={index} className="h-full">
               <img 
                 src={img} 

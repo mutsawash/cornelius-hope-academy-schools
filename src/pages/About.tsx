@@ -1,6 +1,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const AboutPage = () => {
   return (
@@ -43,6 +44,13 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="bg-secondary/20 p-8 rounded-lg">
+              <div className="mb-6">
+                <img 
+                  src="/lovable-uploads/3c65f13b-bd9d-4867-b0e9-23516651a5e9.png" 
+                  alt="Abstract school design" 
+                  className="w-full h-auto rounded-md mb-6" 
+                />
+              </div>
               <h2 className="text-2xl font-semibold mb-4 text-primary">Our Vision</h2>
               <p className="mb-6">
                 To produce graduates who are responsive to the needs of the nation.

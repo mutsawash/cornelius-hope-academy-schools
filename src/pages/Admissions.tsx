@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ClipboardList, Calendar, DollarSign, GraduationCap } from "lucide-react";
+import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const AdmissionsPage = () => {
   return (
@@ -36,7 +37,7 @@ const AdmissionsPage = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Ages 5-12 (Grades 1-6)</p>
+                    <p>Ages 0-13</p>
                     <p className="mt-2">Focusing on building a strong academic foundation and developing essential skills.</p>
                   </CardContent>
                 </Card>
@@ -48,7 +49,7 @@ const AdmissionsPage = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Ages 13-18 (Grades 7-12)</p>
+                    <p>Form 1 to Form 4</p>
                     <p className="mt-2">Providing a rigorous academic program that prepares students for higher education.</p>
                   </CardContent>
                 </Card>
@@ -114,7 +115,6 @@ const AdmissionsPage = () => {
                   <li>Provide academic records</li>
                   <li>Teacher recommendations</li>
                   <li>Entrance assessment</li>
-                  <li>Family interview</li>
                   <li>Admissions decision</li>
                 </ol>
               </CardContent>
@@ -128,8 +128,8 @@ const AdmissionsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="mb-4">Our tuition is competitive and reflects our commitment to providing a high-quality education.</p>
-                <p className="mb-2"><strong>Primary School:</strong> $X,XXX per year</p>
-                <p><strong>Secondary School:</strong> $X,XXX per year</p>
+                <p className="mb-2"><strong>Primary School:</strong> Please contact administration</p>
+                <p><strong>Secondary School:</strong> Please contact administration</p>
                 <p className="mt-4 text-sm text-gray-600">Additional fees may apply for books, technology, and extracurricular activities.</p>
               </CardContent>
             </Card>

@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const SecondarySchool = () => {
   const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
@@ -10,8 +11,9 @@ const SecondarySchool = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
-        <div className="py-8 bg-primary text-white text-center">
-          <div className="container mx-auto px-4">
+        <div className="py-8 bg-primary text-white text-center relative">
+          <HomeImageCarousel sectionId="secondary-banner" className="absolute inset-0 -z-10" />
+          <div id="secondary-banner" className="container mx-auto px-4 relative z-10">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Secondary School</h1>
           </div>
         </div>
@@ -126,6 +128,7 @@ const SecondarySchool = () => {
                 >
                   <Button size="lg" className="mb-2">Apply for Secondary School</Button>
                 </a>
+                <p className="text-sm text-gray-600 mt-2">Form 1 to Form 4</p>
               </div>
             </div>
           </div>

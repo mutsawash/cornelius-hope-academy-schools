@@ -57,6 +57,9 @@ const UploadGallery = () => {
     setImages(updatedImages);
     localStorage.setItem("galleryImages", JSON.stringify(updatedImages));
 
+    // Trigger an event to notify components that gallery images have been updated
+    window.dispatchEvent(new Event('galleryImagesUpdated'));
+
     // Reset form
     setTitle("");
     setCategory("");
@@ -64,7 +67,7 @@ const UploadGallery = () => {
 
     toast({
       title: "Image added",
-      description: "The image has been added to the gallery",
+      description: "The image has been added to the gallery and slideshow",
     });
   };
 
@@ -72,10 +75,13 @@ const UploadGallery = () => {
     const updatedImages = images.filter(image => image.id !== id);
     setImages(updatedImages);
     localStorage.setItem("galleryImages", JSON.stringify(updatedImages));
+    
+    // Trigger an event to notify components that gallery images have been updated
+    window.dispatchEvent(new Event('galleryImagesUpdated'));
 
     toast({
       title: "Image removed",
-      description: "The image has been removed from the gallery",
+      description: "The image has been removed from the gallery and slideshow",
     });
   };
 
@@ -127,6 +133,9 @@ const UploadGallery = () => {
             </div>
             
             <Button onClick={handleAddImage} className="w-full">Add Image</Button>
+            <p className="text-xs text-gray-500 text-center">
+              Images added here will appear in both the gallery and homepage slideshow
+            </p>
           </div>
         </CardContent>
       </Card>
