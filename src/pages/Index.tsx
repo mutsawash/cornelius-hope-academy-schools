@@ -32,7 +32,7 @@ const Index = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-6">
-            <NavLink to="/academics">
+            <NavLink to="/primary-school">
               <Button 
                 size="lg" 
                 className="font-medium text-base md:text-lg bg-accent text-primary hover:bg-accent/90"
@@ -40,7 +40,7 @@ const Index = () => {
                 Primary School
               </Button>
             </NavLink>
-            <NavLink to="/academics#secondary-school-section">
+            <NavLink to="/secondary-school">
               <Button 
                 size="lg" 
                 className="font-medium text-base md:text-lg bg-[#BE9E7F] text-white hover:bg-[#BE9E7F]/90"

@@ -12,6 +12,8 @@ import ContactPage from "./pages/Contact";
 import GalleryPage from "./pages/Gallery";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import PrimarySchool from "./pages/PrimarySchool";
+import SecondarySchool from "./pages/SecondarySchool";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/admissions" element={<AdmissionsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/primary-school" element={<PrimarySchool />} />
+          <Route path="/secondary-school" element={<SecondarySchool />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
