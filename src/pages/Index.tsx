@@ -27,7 +27,7 @@ const Index = () => {
               Welcome to Cornelius Hope Academy Schools
             </h1>
             <p className="text-white mt-4 max-w-3xl mx-auto">
-              A Christian private school established in 2007, offering quality education from ECD to Form 4
+              Hope for their Future
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-6">

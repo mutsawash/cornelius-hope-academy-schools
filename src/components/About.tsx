@@ -11,7 +11,7 @@ const About = () => {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1740&auto=format&fit=crop"
-                alt="School building"
+                alt="Students in classroom"
                 className="rounded-lg shadow-xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg hidden md:block">
@@ -22,12 +22,12 @@ const About = () => {
           </div>
           
           <div className="md:w-1/2 md:pl-16">
-            <h2 className="text-3xl font-bold mb-6 text-primary">About Our School</h2>
+            <h2 className="text-3xl font-bold mb-6 text-primary">Our Approach to Education</h2>
             <p className="text-gray-600 mb-6">
-              Cornelius Hope Academy is a Christian private school located in Goodhope suburb, about 5 kilometers from Westgate Round along Nemakonde (former Lomagundi). Our primary school was established in 2007, with the secondary school following in 2010.
+              At Cornelius Hope Academy, we believe education goes beyond textbooks and tests. We foster a supportive community where students develop critical thinking skills, emotional intelligence, and a lifelong passion for learning.
             </p>
             <p className="text-gray-600 mb-6">
-              We offer both day and boarding facilities for secondary school that focus on developing holistic graduates. We provide not only academic development but also spiritual, physical, and psycho-social support to our learners. We are a one-stop school from ECD to Form 4.
+              Our holistic approach combines rigorous academics with character development, helping students become not just knowledgeable individuals, but thoughtful, ethical leaders prepared for success in an ever-changing world.
             </p>
             <NavLink to="/about">
               <Button>Learn More About Us</Button>

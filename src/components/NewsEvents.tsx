@@ -1,23 +1,15 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router-dom";
 
 const NewsEvents = () => {
   const events = [
     {
-      title: "Annual Sports Day",
-      date: "June 15, 2024",
-      description: "Join us for competitions in cricket, hockey, basketball, swimming, tennis, volleyball, soccer, netball, handball and athletics."
-    },
-    {
-      title: "Arts and Clubs Showcase",
-      date: "July 10, 2024",
-      description: "Students showcase their talents in debate, drama, dance, quiz, spelling bee, music, choir, and public speaking."
-    },
-    {
-      title: "Parent-Teacher Conference",
-      date: "August 5, 2024",
-      description: "An opportunity to discuss your child's progress and development with our dedicated teachers."
+      title: "Form 1 Opening Day",
+      date: "April 2026",
+      description: "Join us for the opening day for our new Form 1 students."
     }
   ];
 
@@ -25,9 +17,9 @@ const NewsEvents = () => {
     <section className="py-10 md:py-16 bg-white/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">News & Upcoming Events</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Upcoming Events</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-            Stay updated with the latest happenings and upcoming events at Cornelius Hope Academy.
+            Join us for these upcoming events and become part of our vibrant community.
           </p>
         </div>
 
@@ -43,9 +35,24 @@ const NewsEvents = () => {
               </CardHeader>
               <CardContent className="px-4 pb-4 md:px-6 md:pb-6">
                 <p className="text-gray-600 text-sm md:text-base">{event.description}</p>
+                <p className="text-gray-500 text-sm mt-2">Details to be announced</p>
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="mt-10 text-center">
+          <Button variant="outline">View All Events</Button>
+        </div>
+        
+        <div className="mt-16 bg-primary/5 p-8 rounded-lg text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Join Our Community?</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+            Take the first step towards providing your child with an exceptional educational experience.
+          </p>
+          <NavLink to="/admissions">
+            <Button size="lg">Apply Now</Button>
+          </NavLink>
         </div>
       </div>
     </section>

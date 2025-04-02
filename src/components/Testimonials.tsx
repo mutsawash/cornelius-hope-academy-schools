@@ -4,19 +4,19 @@ import { Card, CardContent } from "@/components/ui/card";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "WiseLearn Academy has provided my child with an exceptional educational experience. The teachers are dedicated and the curriculum is challenging yet engaging.",
-      author: "Sarah Johnson",
+      quote: "Cornelius Hope Academy has been transformative for my family. The teachers genuinely care about each student's progress and well-being.",
+      author: "Mr. Matsomai",
       role: "Parent"
     },
     {
-      quote: "As a former student, I can attest to the quality of education at WiseLearn. The school prepared me well for university and beyond.",
-      author: "Michael Chen",
-      role: "Alumni"
+      quote: "The challenging curriculum and supportive environment prepared students exceptionally well for higher education. They develop both academic skills and confidence.",
+      author: "Mrs. Mukwesha",
+      role: "Community Leader"
     },
     {
-      quote: "The supportive environment at WiseLearn allows students to explore their interests and develop their talents. My children have thrived here.",
-      author: "David Williams",
-      role: "Parent"
+      quote: "As an educator, I've seen many schools, but Cornelius Hope stands out with its commitment to excellence and individual student growth.",
+      author: "Professor Gandari",
+      role: "Education Consultant"
     }
   ];
 
@@ -26,7 +26,7 @@ const Testimonials = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">What Our Community Says</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Hear from our parents, students, and alumni about their experiences at WiseLearn Academy.
+            Don't just take our word for it. Hear from the students, parents, and community leaders who have experienced the Cornelius Hope difference.
           </p>
         </div>
 
@@ -38,7 +38,12 @@ const Testimonials = () => {
                 <p className="text-gray-700 mb-6">{testimonial.quote}</p>
                 <div className="border-t pt-4">
                   <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <div className="flex items-center space-x-2">
+                    <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center font-semibold">
+                      {testimonial.author.charAt(0)}
+                    </div>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
