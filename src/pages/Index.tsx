@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import HomeImageCarousel from "@/components/HomeImageCarousel";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
 
 const Index = () => {
   return (
@@ -58,6 +59,7 @@ const Index = () => {
         <NewsEvents />
       </main>
       <Footer />
+      <AnnouncementBanner />
     </div>
   );
 };

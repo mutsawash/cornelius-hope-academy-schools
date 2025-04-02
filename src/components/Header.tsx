@@ -49,6 +49,9 @@ const Header = () => {
           <NavLink to="/admissions" className="font-medium hover:text-primary transition-colors">
             Admissions
           </NavLink>
+          <NavLink to="/gallery" className="font-medium hover:text-primary transition-colors">
+            Gallery
+          </NavLink>
           <NavLink to="/contact" className="font-medium hover:text-primary transition-colors">
             Contact
           </NavLink>
@@ -133,6 +136,13 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Admissions
+            </NavLink>
+            <NavLink 
+              to="/gallery" 
+              className="font-medium py-2 hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Gallery
             </NavLink>
             <NavLink 
               to="/contact" 
