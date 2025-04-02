@@ -30,7 +30,7 @@ const Header = () => {
               className="h-12 w-auto" 
             />
             <h1 className="text-2xl font-bold text-primary hidden md:block">
-              Cornelius Hope Academy
+              Cornelius Hope Academy Schools
             </h1>
           </NavLink>
         </div>

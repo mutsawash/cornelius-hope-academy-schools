@@ -1,4 +1,3 @@
-
 import { NavLink } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
@@ -19,14 +18,29 @@ const Footer = () => {
             <p className="mb-4">
               Providing quality education and nurturing excellence since 2007.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="Facebook">
+            <div className="flex flex-col">
+              <a 
+                href="https://vohzimbabwe.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mb-2 flex items-center gap-2 hover:text-secondary transition-colors"
+              >
+                <img 
+                  src="/lovable-uploads/f6f18ead-09eb-42b4-aa2e-d812b1cb3925.png" 
+                  alt="Village of Hope Logo" 
+                  className="h-8 w-auto bg-white/90 p-1 rounded-md" 
+                />
+                <span>Village of Hope Zimbabwe</span>
+              </a>
+            </div>
+            <div className="flex space-x-4 mt-4">
+              <a href="https://www.facebook.com/profile.php/?id=61561381671901" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
               <a href="#" className="hover:text-secondary transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="https://www.instagram.com/cornelius_hope_academy_/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/cornelius_hope_academy_/" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-400 transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>
