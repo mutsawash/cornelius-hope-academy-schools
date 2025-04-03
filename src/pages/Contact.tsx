@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
@@ -92,6 +92,40 @@ const ContactPage = () => {
                     <div className="text-gray-600 space-y-1">
                       <a href="mailto:chaps-primaryschool@gmail.com" className="block hover:text-primary break-words">chaps-primaryschool@gmail.com</a>
                       <a href="mailto:chassecondary@gmail.com" className="block hover:text-primary break-words">chassecondary@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <Facebook size={24} className="text-blue-600 shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-medium">Facebook</h3>
+                    <div className="text-gray-600">
+                      <a 
+                        href="https://www.facebook.com/profile.php/?id=61561381671901" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="block hover:text-primary"
+                      >
+                        Find us on Facebook
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <Instagram size={24} className="text-red-600 shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-medium">Instagram</h3>
+                    <div className="text-gray-600">
+                      <a 
+                        href="https://www.instagram.com/cornelius_hope_academy_/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="block hover:text-primary"
+                      >
+                        Follow us on Instagram
+                      </a>
                     </div>
                   </div>
                 </div>

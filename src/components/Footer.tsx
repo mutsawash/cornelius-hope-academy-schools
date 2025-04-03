@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -81,7 +81,7 @@ const Footer = () => {
                 rel="noopener noreferrer" 
                 className="text-white hover:text-accent transition-colors flex flex-col items-center"
               >
-                <Facebook size={24} />
+                <Facebook size={24} className="text-blue-600" />
                 <span className="text-xs mt-1">Find us on Facebook</span>
               </a>
               <a 
@@ -90,7 +90,7 @@ const Footer = () => {
                 rel="noopener noreferrer" 
                 className="text-white hover:text-accent transition-colors flex flex-col items-center"
               >
-                <Instagram size={24} />
+                <Instagram size={24} className="text-red-600" />
                 <span className="text-xs mt-1">Follow us on Instagram</span>
               </a>
             </div>

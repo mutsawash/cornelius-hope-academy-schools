@@ -25,6 +25,9 @@ interface UserComment {
   timestamp: number;
 }
 
+// Create a unique identifier for the current user's session
+const sessionId = Date.now().toString();
+
 const Testimonials = () => {
   const { toast } = useToast();
   const [name, setName] = useState("");
@@ -33,6 +36,7 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [userComments, setUserComments] = useState<UserComment[]>([]);
   const [isFormVisible, setIsFormVisible] = useState(false);
+  const [likedTestimonials, setLikedTestimonials] = useState<Record<string, boolean>>({});
   
   const defaultTestimonials = [
     {
@@ -68,8 +72,28 @@ const Testimonials = () => {
       setUserComments(JSON.parse(storedComments));
     }
     
+    // Load default testimonial likes from localStorage
+    const storedDefaultLikes = localStorage.getItem("defaultTestimonialLikes");
+    if (storedDefaultLikes) {
+      const parsedDefaultLikes = JSON.parse(storedDefaultLikes);
+      setTestimonials(defaultTestimonials.map(t => ({
+        ...t,
+        likes: parsedDefaultLikes[t.id] || t.likes
+      })));
+    } else {
+      setTestimonials([...defaultTestimonials]);
+    }
+    
     // Set initial testimonials (defaults + user comments)
-    setTestimonials([...defaultTestimonials, ...(storedComments ? JSON.parse(storedComments) : [])]);
+    setTestimonials(prevTestimonials => 
+      [...prevTestimonials, ...(storedComments ? JSON.parse(storedComments) : [])]
+    );
+    
+    // Load the user's liked testimonials to prevent duplicate likes
+    const storedLikedTestimonials = localStorage.getItem(`likedTestimonials_${sessionId}`);
+    if (storedLikedTestimonials) {
+      setLikedTestimonials(JSON.parse(storedLikedTestimonials));
+    }
   }, []);
 
   const handleAddComment = () => {
@@ -93,7 +117,16 @@ const Testimonials = () => {
 
     const updatedComments = [...userComments, newComment];
     setUserComments(updatedComments);
-    setTestimonials([...defaultTestimonials, ...updatedComments]);
+    
+    // Update testimonials state
+    const currentDefaultLikes = localStorage.getItem("defaultTestimonialLikes");
+    const defaultLikes = currentDefaultLikes ? JSON.parse(currentDefaultLikes) : {};
+    const updatedDefaultTestimonials = defaultTestimonials.map(t => ({
+      ...t,
+      likes: defaultLikes[t.id] || t.likes
+    }));
+    
+    setTestimonials([...updatedDefaultTestimonials, ...updatedComments]);
     
     // Save to localStorage
     localStorage.setItem("userComments", JSON.stringify(updatedComments));
@@ -111,13 +144,37 @@ const Testimonials = () => {
   };
 
   const handleLike = (id: string) => {
+    // Check if the user has already liked this testimonial
+    if (likedTestimonials[id]) {
+      toast({
+        title: "Already liked",
+        description: "You've already liked this testimonial",
+      });
+      return;
+    }
+    
     // Check if it's a default testimonial
     const isDefault = defaultTestimonials.some(t => t.id === id);
     
     if (isDefault) {
-      // Handle default testimonial likes (just in memory)
+      // Handle default testimonial likes (store in localStorage)
+      const currentDefaultLikes = localStorage.getItem("defaultTestimonialLikes");
+      const defaultLikes = currentDefaultLikes ? JSON.parse(currentDefaultLikes) : {};
+      
+      // Find the current testimonial
+      const currentTestimonial = testimonials.find(t => t.id === id);
+      if (!currentTestimonial) return;
+      
+      // Update the likes count
+      const updatedLikes = (defaultLikes[id] || currentTestimonial.likes) + 1;
+      defaultLikes[id] = updatedLikes;
+      
+      // Save to localStorage
+      localStorage.setItem("defaultTestimonialLikes", JSON.stringify(defaultLikes));
+      
+      // Update state
       setTestimonials(prev => 
-        prev.map(t => t.id === id ? { ...t, likes: t.likes + 1 } : t)
+        prev.map(t => t.id === id ? { ...t, likes: updatedLikes } : t)
       );
     } else {
       // Handle user comment likes (stored in localStorage)
@@ -126,9 +183,23 @@ const Testimonials = () => {
       );
       
       setUserComments(updatedComments);
-      setTestimonials([...defaultTestimonials, ...updatedComments]);
       localStorage.setItem("userComments", JSON.stringify(updatedComments));
+      
+      // Update the testimonials state
+      const currentDefaultLikes = localStorage.getItem("defaultTestimonialLikes");
+      const defaultLikes = currentDefaultLikes ? JSON.parse(currentDefaultLikes) : {};
+      const updatedDefaultTestimonials = defaultTestimonials.map(t => ({
+        ...t,
+        likes: defaultLikes[t.id] || t.likes
+      }));
+      
+      setTestimonials([...updatedDefaultTestimonials, ...updatedComments]);
     }
+    
+    // Mark this testimonial as liked by the current user
+    const updatedLikedTestimonials = { ...likedTestimonials, [id]: true };
+    setLikedTestimonials(updatedLikedTestimonials);
+    localStorage.setItem(`likedTestimonials_${sessionId}`, JSON.stringify(updatedLikedTestimonials));
   };
 
   return (
