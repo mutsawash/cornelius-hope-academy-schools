@@ -12,6 +12,9 @@ import HomeImageCarousel from "@/components/HomeImageCarousel";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 
 const Index = () => {
+  const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
+  const primaryEnrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfJyrWVQLy7WH6W1xLM0A9QKMo4Ica6_muJh3XzCnJfDFaG7A/viewform";
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -32,22 +35,22 @@ const Index = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-6">
-            <NavLink to="/primary-school">
-              <Button 
-                size="lg" 
-                className="font-medium text-base md:text-lg bg-accent text-primary hover:bg-accent/90"
-              >
-                Primary School
-              </Button>
-            </NavLink>
-            <NavLink to="/secondary-school">
-              <Button 
-                size="lg" 
-                className="font-medium text-base md:text-lg bg-[#BE9E7F] text-white hover:bg-[#BE9E7F]/90"
-              >
-                Secondary School
-              </Button>
-            </NavLink>
+            <a 
+              href={primaryEnrollmentFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-accent text-primary hover:bg-accent/90 transition-colors h-10 px-4 py-2 text-base md:text-lg font-medium"
+            >
+              Primary School
+            </a>
+            <a 
+              href={enrollmentFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-[#BE9E7F] text-white hover:bg-[#BE9E7F]/90 transition-colors h-10 px-4 py-2 text-base md:text-lg font-medium"
+            >
+              Secondary School
+            </a>
           </div>
         </div>
       </div>

@@ -2,18 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const Hero = () => {
@@ -34,35 +22,22 @@ const Hero = () => {
             Our vision is to produce graduates who are responsive to the needs of the nation, becoming competent, self-reliant and acceptable members of the global society.
           </p>
           <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button size="default" className="flex items-center gap-1 text-sm sm:text-base">
-                  Apply Now <ChevronDown size={16} />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white">
-                <DropdownMenuItem className="cursor-pointer">
-                  <a 
-                    href={primaryEnrollmentFormUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-full"
-                  >
-                    Primary School
-                  </a>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <a 
-                    href={enrollmentFormUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-full"
-                  >
-                    Secondary School
-                  </a>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <a 
+              href={primaryEnrollmentFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-accent text-primary hover:bg-accent/90 transition-colors h-10 px-4 py-2 text-sm font-medium"
+            >
+              Apply for Primary School
+            </a>
+            <a 
+              href={enrollmentFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-[#BE9E7F] text-white hover:bg-[#BE9E7F]/90 transition-colors h-10 px-4 py-2 text-sm font-medium"
+            >
+              Apply for Secondary School
+            </a>
             <NavLink to="/about">
               <Button variant="outline" size="default" className="border-white text-white hover:bg-white/10 text-sm sm:text-base">Learn More</Button>
             </NavLink>

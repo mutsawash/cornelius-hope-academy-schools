@@ -6,14 +6,22 @@ import {
   CarouselItem
 } from "@/components/ui/carousel";
 
-// Default images from the homepage
+// Default images from the homepage and new uploaded images
 const defaultImages = [
   "/lovable-uploads/c3471d45-23a1-4735-8de2-a28e3661fa6c.png",
   "/lovable-uploads/b60944a1-00b0-4ee2-a9f2-fab022c0374d.png",
   "/lovable-uploads/39470031-790d-444a-a833-a445dc2f57da.png",
   "/lovable-uploads/d3550c47-462b-4532-8db3-9aac902597e0.png",
-  "/lovable-uploads/38b18dfa-9b9f-4d6b-80b4-633f4eef3b58.png"
+  "/lovable-uploads/38b18dfa-9b9f-4d6b-80b4-633f4eef3b58.png",
+  // New images
+  "/lovable-uploads/49aa16c3-490c-4b6a-94a4-e557f0429b99.png",
+  "/lovable-uploads/5415b86a-758a-413f-930b-8338d7a6324c.png",
+  "/lovable-uploads/b671d646-74df-404d-afb5-c29664eb8f26.png",
+  "/lovable-uploads/29465880-9ea5-4dab-b36d-cb6581a5dc17.png"
 ];
+
+// Background image for the slideshow
+const backgroundImage = "/lovable-uploads/95e67ba2-a669-4aab-979a-a52566cbd3a9.png";
 
 interface HomeImageCarouselProps {
   sectionId: string;
@@ -91,7 +99,14 @@ const HomeImageCarousel = ({
   
   return (
     <div className={className}
-      style={{ opacity: isVisible ? 1 : 0, transition: "opacity 1000ms" }}>
+      style={{ 
+        opacity: isVisible ? 1 : 0, 
+        transition: "opacity 1000ms",
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+      <div className="absolute inset-0 bg-black/20"></div>
       <Carousel className="w-full h-full" opts={{ loop: true, duration: 1000 }} setApi={setApi}>
         <CarouselContent className="h-full">
           {displayImages.map((img, index) => (

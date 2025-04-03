@@ -53,7 +53,7 @@ const ContactPage = () => {
           
           <div className="w-full max-w-4xl mx-auto mb-10">
             <img 
-              src="/lovable-uploads/a504477f-b35c-496f-9526-0505610388e4.png" 
+              src="/lovable-uploads/95e67ba2-a669-4aab-979a-a52566cbd3a9.png" 
               alt="Contact Design" 
               className="w-full h-auto rounded-lg shadow-xl" 
             />
