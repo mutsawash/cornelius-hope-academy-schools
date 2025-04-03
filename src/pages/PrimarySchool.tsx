@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -21,6 +20,14 @@ const PrimarySchool = () => {
         <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <div className="mb-10 flex justify-center">
+                <img 
+                  src="/lovable-uploads/d92dd935-0108-4f95-a553-de55cf3d227f.png" 
+                  alt="Primary School Design" 
+                  className="w-full max-w-3xl h-auto rounded-lg shadow-xl" 
+                />
+              </div>
+              
               <p className="text-lg mb-8">
                 Our curriculum is designed to build a strong foundation for lifelong learning while nurturing each student's unique talents and abilities in a supportive Pentacostal Christian environment.
               </p>

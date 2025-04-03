@@ -51,6 +51,14 @@ const ContactPage = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
           
+          <div className="w-full max-w-4xl mx-auto mb-10">
+            <img 
+              src="/lovable-uploads/a504477f-b35c-496f-9526-0505610388e4.png" 
+              alt="Contact Design" 
+              className="w-full h-auto rounded-lg shadow-xl" 
+            />
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>

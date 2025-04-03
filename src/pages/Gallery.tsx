@@ -18,6 +18,14 @@ const GalleryPage = () => {
               Explore the visual journey of our students and activities at Cornelius Hope Academy Schools.
             </p>
             
+            <div className="flex justify-center mb-10">
+              <img 
+                src="/lovable-uploads/01ecab8d-2f81-403a-9f33-c0f8802f3b1e.png" 
+                alt="Gallery Design" 
+                className="w-full max-w-3xl h-auto rounded-lg shadow-xl" 
+              />
+            </div>
+            
             <div className="flex justify-center gap-4 mb-10">
               <NavLink to="/admin/login">
                 <Button variant="outline">Admin Login</Button>

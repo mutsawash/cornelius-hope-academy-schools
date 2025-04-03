@@ -54,6 +54,31 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <Features />
+        <section className="py-12 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="md:w-1/2">
+                <img 
+                  src="/lovable-uploads/dddba70b-c458-4fa1-a100-10be24c11129.png" 
+                  alt="School Design" 
+                  className="w-full h-auto rounded-lg shadow-xl" 
+                />
+              </div>
+              <div className="md:w-1/2">
+                <h2 className="text-3xl font-bold mb-4 text-primary">Embracing Excellence</h2>
+                <p className="text-gray-600 mb-6">
+                  Our commitment to excellence is reflected in everything we do at Cornelius Hope Academy. 
+                  From our innovative curriculum to our dedicated staff, we strive to create an environment 
+                  where students can flourish academically, socially, and spiritually.
+                </p>
+                <p className="text-gray-600">
+                  We believe in nurturing the full potential of each student, preparing them not just for 
+                  academic success, but for leadership and positive contribution to society.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <About />
         <Testimonials />
         <NewsEvents />

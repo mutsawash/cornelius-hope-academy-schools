@@ -24,6 +24,13 @@ const AcademicsPage = () => {
           
           <div className="mb-16">
             <div className="bg-primary p-8 rounded-lg mb-10 text-white shadow-lg border-2 border-accent">
+              <div className="mb-6">
+                <img 
+                  src="/lovable-uploads/555bcc94-c60f-4683-bc6d-69c2eb160f22.png" 
+                  alt="Academic Excellence" 
+                  className="w-full h-auto rounded-lg shadow-xl mb-6" 
+                />
+              </div>
               <h2 className="text-3xl font-semibold mb-6 text-white">Primary School</h2>
               <p className="text-lg mb-6">
                 Our curriculum is designed to build a strong foundation for lifelong learning while nurturing each student's unique talents and abilities.

@@ -14,9 +14,9 @@ const About = () => {
                 alt="School affiliations"
                 className="rounded-lg shadow-xl w-full"
               />
-              <div className="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg hidden md:block">
-                <p className="font-bold text-2xl">Est. 2007</p>
-                <p>Excellence in Education</p>
+              <div className="absolute -bottom-6 -right-6 bg-primary text-white p-3 rounded-lg shadow-lg hidden md:block">
+                <p className="font-bold text-xl">Est. 2007</p>
+                <p>Hope for their Future</p>
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Youtube, Mail, Phone } from "lucide-react
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-primary text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -31,25 +31,25 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <NavLink to="/" className="hover:text-primary transition-colors">Home</NavLink>
+                <NavLink to="/" className="hover:text-accent transition-colors">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/about" className="hover:text-primary transition-colors">About</NavLink>
+                <NavLink to="/about" className="hover:text-accent transition-colors">About</NavLink>
               </li>
               <li>
-                <NavLink to="/academics" className="hover:text-primary transition-colors">Academics</NavLink>
+                <NavLink to="/academics" className="hover:text-accent transition-colors">Academics</NavLink>
               </li>
               <li>
-                <NavLink to="/admissions" className="hover:text-primary transition-colors">Admissions</NavLink>
+                <NavLink to="/admissions" className="hover:text-accent transition-colors">Admissions</NavLink>
               </li>
               <li>
-                <NavLink to="/gallery" className="hover:text-primary transition-colors">Gallery</NavLink>
+                <NavLink to="/gallery" className="hover:text-accent transition-colors">Gallery</NavLink>
               </li>
               <li>
-                <NavLink to="/alumni" className="hover:text-primary transition-colors">Alumni</NavLink>
+                <NavLink to="/alumni" className="hover:text-accent transition-colors">Alumni</NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className="hover:text-primary transition-colors">Contact</NavLink>
+                <NavLink to="/contact" className="hover:text-accent transition-colors">Contact</NavLink>
               </li>
             </ul>
           </div>
@@ -63,11 +63,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone size={16} className="mr-2" />
-                <a href="tel:+0242003287" className="hover:text-primary transition-colors">(0242) 00328 97</a>
+                <a href="tel:+0242003287" className="hover:text-accent transition-colors">(0242) 00328 97</a>
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="mr-2" />
-                <a href="mailto:chassecondary@gmail.com" className="hover:text-primary transition-colors">chassecondary@gmail.com</a>
+                <a href="mailto:chassecondary@gmail.com" className="hover:text-accent transition-colors">chassecondary@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -79,33 +79,19 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php/?id=61561381671901" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-blue-500 hover:text-blue-400 transition-colors"
+                className="text-white hover:text-accent transition-colors flex flex-col items-center"
               >
                 <Facebook size={24} />
+                <span className="text-xs mt-1">Find us on Facebook</span>
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/cornelius_hope_academy_/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-pink-500 hover:text-pink-400 transition-colors"
+                className="text-white hover:text-accent transition-colors flex flex-col items-center"
               >
                 <Instagram size={24} />
-              </a>
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                <Twitter size={24} />
-              </a>
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-red-600 hover:text-red-500 transition-colors"
-              >
-                <Youtube size={24} />
+                <span className="text-xs mt-1">Follow us on Instagram</span>
               </a>
             </div>
             <div className="mt-6">
@@ -115,7 +101,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-700 text-center">
+        <div className="mt-12 pt-8 border-t border-green-700 text-center">
           <p>&copy; {new Date().getFullYear()} Cornelius Hope Academy Schools. All rights reserved.</p>
         </div>
       </div>
