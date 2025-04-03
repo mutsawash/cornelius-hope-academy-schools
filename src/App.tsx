@@ -16,6 +16,7 @@ import PrimarySchool from "./pages/PrimarySchool";
 import SecondarySchool from "./pages/SecondarySchool";
 import AlumniPage from "./pages/Alumni";
 import NotFound from "./pages/NotFound";
+import AnnouncementBanner from "./components/AnnouncementBanner";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AnnouncementBanner />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />

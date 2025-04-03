@@ -32,6 +32,22 @@ const GallerySection = ({ title, category }: GallerySectionProps) => {
       const filteredImages = parsedImages.filter(img => img.category === category);
       setImages(filteredImages);
     }
+    
+    // Listen for gallery updates
+    const handleGalleryUpdate = () => {
+      const updatedImages = localStorage.getItem("galleryImages");
+      if (updatedImages) {
+        const parsedImages: GalleryImage[] = JSON.parse(updatedImages);
+        const filteredImages = parsedImages.filter(img => img.category === category);
+        setImages(filteredImages);
+      }
+    };
+    
+    window.addEventListener("galleryImagesUpdated", handleGalleryUpdate);
+    
+    return () => {
+      window.removeEventListener("galleryImagesUpdated", handleGalleryUpdate);
+    };
   }, [category]);
 
   if (images.length === 0) {

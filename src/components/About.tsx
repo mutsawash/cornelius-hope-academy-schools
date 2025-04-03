@@ -10,9 +10,9 @@ const About = () => {
           <div className="md:w-1/2 mb-10 md:mb-0">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1740&auto=format&fit=crop"
-                alt="Students in classroom"
-                className="rounded-lg shadow-xl"
+                src="/lovable-uploads/fa68ba4e-e20a-4195-bad5-16eb142282b1.png"
+                alt="School affiliations"
+                className="rounded-lg shadow-xl w-full"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg hidden md:block">
                 <p className="font-bold text-2xl">Est. 2007</p>
