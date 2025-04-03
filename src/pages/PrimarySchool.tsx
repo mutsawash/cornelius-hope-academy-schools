@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const PrimarySchool = () => {
-  const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
+  const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfJyrWVQLy7WH6W1xLM0A9QKMo4Ica6_muJh3XzCnJfDFaG7A/viewform";
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -107,7 +107,7 @@ const PrimarySchool = () => {
                 <h2 className="text-2xl font-bold text-primary mb-6">Why Choose Our Primary School</h2>
                 <div className="space-y-4">
                   <p>Our primary school provides a nurturing environment where children develop a love for learning while building a strong academic foundation. Our experienced teachers are dedicated to helping each student reach their full potential.</p>
-                  <p>With small class sizes and a focus on holistic development, we ensure that every child receives the attention and support they need to thrive academically, socially, emotionally, and spiritually.</p>
+                  <p>With class sizes of 20-25 students and a focus on holistic development, we ensure that every child receives the attention and support they need to thrive academically, socially, emotionally, and spiritually.</p>
                   <p>Our on-campus clinic provides immediate health care needs, and our dedicated team offers comprehensive psychosocial support and child safeguarding measures to ensure the wellbeing of each student.</p>
                   <p>As a Pentecostal Christian school, we integrate faith-based values into our curriculum, fostering spiritual growth alongside academic excellence.</p>
                 </div>
@@ -115,13 +115,13 @@ const PrimarySchool = () => {
               
               <div className="text-center">
                 <a 
-                  href={`${enrollmentFormUrl}&entry.123456789=Primary`} 
+                  href={enrollmentFormUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
                   <Button size="lg" className="mb-2">Apply for Primary School</Button>
                 </a>
-                <p className="text-sm text-gray-600 mt-2">Ages 0-13</p>
+                <p className="text-sm text-gray-600 mt-2">Ages 2-13 (Preschool to Grade 7)</p>
               </div>
             </div>
           </div>

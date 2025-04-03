@@ -32,12 +32,23 @@ const HomeImageCarousel = ({
   
   // Load images from gallery
   useEffect(() => {
-    const storedImages = localStorage.getItem("galleryImages");
-    if (storedImages) {
-      const parsedImages = JSON.parse(storedImages);
-      const imageUrls = parsedImages.map((img: any) => img.url);
-      setGalleryImages(imageUrls);
-    }
+    const loadGalleryImages = () => {
+      const storedImages = localStorage.getItem("galleryImages");
+      if (storedImages) {
+        const parsedImages = JSON.parse(storedImages);
+        const imageUrls = parsedImages.map((img: any) => img.url);
+        setGalleryImages(imageUrls);
+      }
+    };
+    
+    loadGalleryImages();
+    
+    // Listen for gallery updates
+    window.addEventListener('galleryImagesUpdated', loadGalleryImages);
+    
+    return () => {
+      window.removeEventListener('galleryImagesUpdated', loadGalleryImages);
+    };
   }, []);
   
   // Combine gallery images with default images or provided images
@@ -87,7 +98,7 @@ const HomeImageCarousel = ({
             <CarouselItem key={index} className="h-full">
               <img 
                 src={img} 
-                alt="School students" 
+                alt="School images" 
                 className="w-full h-full object-contain max-h-[90vh]"
               />
             </CarouselItem>

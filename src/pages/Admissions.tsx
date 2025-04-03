@@ -3,10 +3,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ClipboardList, Calendar, DollarSign, GraduationCap } from "lucide-react";
+import { ClipboardList, DollarSign, GraduationCap } from "lucide-react";
 import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const AdmissionsPage = () => {
+  const primaryEnrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfJyrWVQLy7WH6W1xLM0A9QKMo4Ica6_muJh3XzCnJfDFaG7A/viewform";
+  const secondaryEnrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -21,8 +24,13 @@ const AdmissionsPage = () => {
             <p className="text-lg mb-6">
               Our admissions process is designed to ensure that each student is a good fit for our program and that we can meet their educational needs. We consider academic potential, character, and the family's commitment to our educational philosophy.
             </p>
-            <div className="flex justify-center mt-8">
-              <Button size="lg" className="px-8">Apply Now</Button>
+            <div className="flex justify-center gap-4 mt-8 flex-wrap">
+              <a href={primaryEnrollmentFormUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="px-8">Apply for Primary School</Button>
+              </a>
+              <a href={secondaryEnrollmentFormUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="px-8" variant="outline">Apply for Secondary School</Button>
+              </a>
             </div>
           </div>
           
@@ -37,7 +45,7 @@ const AdmissionsPage = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Ages 0-13</p>
+                    <p>Ages 2-13 (Preschool to Grade 7)</p>
                     <p className="mt-2">Focusing on building a strong academic foundation and developing essential skills.</p>
                   </CardContent>
                 </Card>
@@ -49,7 +57,7 @@ const AdmissionsPage = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Form 1 to Form 4</p>
+                    <p>Ages 12-19, Form 1 to Form 4 (Grade 8 to Grade 11)</p>
                     <p className="mt-2">Providing a rigorous academic program that prepares students for higher education.</p>
                   </CardContent>
                 </Card>
@@ -57,43 +65,37 @@ const AdmissionsPage = () => {
             </div>
             
             <div>
-              <h2 className="text-2xl font-semibold mb-6 text-primary">Admissions Timeline</h2>
-              <Card className="bg-secondary/20 border-secondary">
+              <h2 className="text-2xl font-semibold mb-6 text-primary">Class Sizes</h2>
+              <Card className="bg-secondary/20 border-secondary h-full">
                 <CardContent className="pt-6">
-                  <ul className="space-y-6">
+                  <p className="mb-4">We maintain a class size of 20-25 students to ensure:</p>
+                  <ul className="space-y-4">
                     <li className="flex">
-                      <Calendar className="h-6 w-6 text-primary mr-3 shrink-0" />
+                      <div className="h-6 w-6 rounded-full bg-primary text-white flex items-center justify-center mr-3 shrink-0">1</div>
                       <div>
-                        <p className="font-semibold">September-January</p>
-                        <p className="text-gray-600">Applications accepted for the following academic year</p>
+                        <p className="font-semibold">Personalized Attention</p>
+                        <p className="text-gray-600">Each student receives individual guidance and support</p>
                       </div>
                     </li>
                     <li className="flex">
-                      <Calendar className="h-6 w-6 text-primary mr-3 shrink-0" />
+                      <div className="h-6 w-6 rounded-full bg-primary text-white flex items-center justify-center mr-3 shrink-0">2</div>
                       <div>
-                        <p className="font-semibold">February-March</p>
-                        <p className="text-gray-600">Entrance assessments and interviews</p>
+                        <p className="font-semibold">Better Learning Environment</p>
+                        <p className="text-gray-600">More focused classroom atmosphere</p>
                       </div>
                     </li>
                     <li className="flex">
-                      <Calendar className="h-6 w-6 text-primary mr-3 shrink-0" />
+                      <div className="h-6 w-6 rounded-full bg-primary text-white flex items-center justify-center mr-3 shrink-0">3</div>
                       <div>
-                        <p className="font-semibold">April</p>
-                        <p className="text-gray-600">Admissions decisions communicated</p>
+                        <p className="font-semibold">Greater Participation</p>
+                        <p className="text-gray-600">More opportunities for students to engage and contribute</p>
                       </div>
                     </li>
                     <li className="flex">
-                      <Calendar className="h-6 w-6 text-primary mr-3 shrink-0" />
+                      <div className="h-6 w-6 rounded-full bg-primary text-white flex items-center justify-center mr-3 shrink-0">4</div>
                       <div>
-                        <p className="font-semibold">May</p>
-                        <p className="text-gray-600">Enrollment contracts and deposits due</p>
-                      </div>
-                    </li>
-                    <li className="flex">
-                      <Calendar className="h-6 w-6 text-primary mr-3 shrink-0" />
-                      <div>
-                        <p className="font-semibold">August</p>
-                        <p className="text-gray-600">Orientation for new students</p>
+                        <p className="font-semibold">Closer Relationships</p>
+                        <p className="text-gray-600">Stronger bonds between students and teachers</p>
                       </div>
                     </li>
                   </ul>
@@ -102,7 +104,7 @@ const AdmissionsPage = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <Card className="bg-white border-secondary">
               <CardHeader>
                 <CardTitle className="flex items-center text-primary">
@@ -133,17 +135,6 @@ const AdmissionsPage = () => {
                 <p className="mt-4 text-sm text-gray-600">Additional fees may apply for books, technology, and extracurricular activities.</p>
               </CardContent>
             </Card>
-            
-            <Card className="bg-secondary/20 border-secondary">
-              <CardHeader>
-                <CardTitle className="text-primary">Financial Aid</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4">Cornelius Hope Academy is committed to making our education accessible to qualified students from diverse economic backgrounds.</p>
-                <p className="mb-4">We offer need-based financial aid and scholarships to eligible families.</p>
-                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10">Learn More</Button>
-              </CardContent>
-            </Card>
           </div>
           
           <div className="bg-white p-8 rounded-lg border border-secondary">
@@ -151,7 +142,7 @@ const AdmissionsPage = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="font-semibold mb-1">What are the class sizes at Cornelius Hope Academy?</h3>
-                <p>Our average class size is 18-20 students, allowing for personalized attention and optimal learning.</p>
+                <p>Our average class size is 20-25 students, allowing for personalized attention and optimal learning.</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Do you offer transportation services?</h3>

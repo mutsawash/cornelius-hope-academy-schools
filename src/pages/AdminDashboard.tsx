@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import UploadGallery from "@/components/UploadGallery";
 import AnnouncementManager from "@/components/AnnouncementManager";
+import EventsManager from "@/components/EventsManager";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -46,13 +47,18 @@ const AdminDashboard = () => {
           </div>
 
           <Tabs defaultValue="gallery">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
-              <TabsTrigger value="gallery">Gallery Management</TabsTrigger>
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-8">
+              <TabsTrigger value="gallery">Gallery</TabsTrigger>
+              <TabsTrigger value="events">Events</TabsTrigger>
               <TabsTrigger value="announcements">Announcements</TabsTrigger>
             </TabsList>
             
             <TabsContent value="gallery">
               <UploadGallery />
+            </TabsContent>
+            
+            <TabsContent value="events">
+              <EventsManager />
             </TabsContent>
             
             <TabsContent value="announcements">

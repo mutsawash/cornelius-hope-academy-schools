@@ -18,6 +18,7 @@ import HomeImageCarousel from "@/components/HomeImageCarousel";
 
 const Hero = () => {
   const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
+  const primaryEnrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfJyrWVQLy7WH6W1xLM0A9QKMo4Ica6_muJh3XzCnJfDFaG7A/viewform";
   
   return (
     <div className="relative">
@@ -42,7 +43,7 @@ const Hero = () => {
               <DropdownMenuContent className="bg-white">
                 <DropdownMenuItem className="cursor-pointer">
                   <a 
-                    href={`${enrollmentFormUrl}&entry.123456789=Primary`} 
+                    href={primaryEnrollmentFormUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-full"
@@ -52,7 +53,7 @@ const Hero = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
                   <a 
-                    href={`${enrollmentFormUrl}&entry.123456789=Secondary`} 
+                    href={enrollmentFormUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-full"

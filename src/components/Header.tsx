@@ -18,6 +18,7 @@ const Header = () => {
   };
 
   const enrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfme7aJt_SOUrrCHk5lfP2nHGLX7j7G2N3hoQrXSC6ihjIlDA/viewform?usp=header";
+  const primaryEnrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfJyrWVQLy7WH6W1xLM0A9QKMo4Ica6_muJh3XzCnJfDFaG7A/viewform";
 
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm">
@@ -52,6 +53,9 @@ const Header = () => {
           <NavLink to="/gallery" className="font-medium hover:text-primary transition-colors">
             Gallery
           </NavLink>
+          <NavLink to="/alumni" className="font-medium hover:text-primary transition-colors">
+            Alumni
+          </NavLink>
           <NavLink to="/contact" className="font-medium hover:text-primary transition-colors">
             Contact
           </NavLink>
@@ -64,17 +68,7 @@ const Header = () => {
             <DropdownMenuContent className="bg-white">
               <DropdownMenuItem className="cursor-pointer">
                 <a 
-                  href={`${enrollmentFormUrl}&entry.123456789=Preschool`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  Preschool
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <a 
-                  href={`${enrollmentFormUrl}&entry.123456789=Primary`} 
+                  href={primaryEnrollmentFormUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full"
@@ -84,7 +78,7 @@ const Header = () => {
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
                 <a 
-                  href={`${enrollmentFormUrl}&entry.123456789=Secondary`} 
+                  href={enrollmentFormUrl}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full"
@@ -145,6 +139,13 @@ const Header = () => {
               Gallery
             </NavLink>
             <NavLink 
+              to="/alumni" 
+              className="font-medium py-2 hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Alumni
+            </NavLink>
+            <NavLink 
               to="/contact" 
               className="font-medium py-2 hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
@@ -155,15 +156,7 @@ const Header = () => {
               <p className="font-medium mb-2">Enroll Now:</p>
               <div className="flex flex-col space-y-2 pl-2">
                 <a 
-                  href={`${enrollmentFormUrl}&entry.123456789=Preschool`} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-primary hover:underline"
-                >
-                  - Preschool
-                </a>
-                <a 
-                  href={`${enrollmentFormUrl}&entry.123456789=Primary`} 
+                  href={primaryEnrollmentFormUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-primary hover:underline"
@@ -171,7 +164,7 @@ const Header = () => {
                   - Primary School
                 </a>
                 <a 
-                  href={`${enrollmentFormUrl}&entry.123456789=Secondary`} 
+                  href={enrollmentFormUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-primary hover:underline"

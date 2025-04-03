@@ -114,7 +114,7 @@ const SecondarySchool = () => {
                 <h2 className="text-2xl font-bold text-primary mb-6">Program Highlights</h2>
                 <div className="space-y-4">
                   <p>Our secondary school builds upon the strong foundation established in primary education, challenging students with rigorous academics while providing opportunities for self-discovery and personal growth.</p>
-                  <p>We prepare students for university and life beyond with a comprehensive approach to education that develops not only academic knowledge but also character, leadership, and life skills.</p>
+                  <p>With class sizes of 20-25 students, we prepare students for university and life beyond with a comprehensive approach to education that develops not only academic knowledge but also character, leadership, and life skills.</p>
                   <p>Our Pentecostal Christian environment fosters spiritual growth alongside academic excellence, helping students develop a strong moral compass and ethical foundation.</p>
                   <p>Students benefit from our on-campus clinic for immediate health needs, and our comprehensive psychosocial support and child safeguarding measures ensure the wellbeing of each student.</p>
                 </div>
@@ -122,13 +122,13 @@ const SecondarySchool = () => {
               
               <div className="text-center">
                 <a 
-                  href={`${enrollmentFormUrl}&entry.123456789=Secondary`} 
+                  href={enrollmentFormUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
                   <Button size="lg" className="mb-2">Apply for Secondary School</Button>
                 </a>
-                <p className="text-sm text-gray-600 mt-2">Form 1 to Form 4</p>
+                <p className="text-sm text-gray-600 mt-2">Ages 12-19, Form 1 to Form 4 (Grade 8 to Grade 11)</p>
               </div>
             </div>
           </div>

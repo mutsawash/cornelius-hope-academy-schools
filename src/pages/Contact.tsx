@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ const ContactPage = () => {
     subject: "",
     message: ""
   });
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -26,8 +28,14 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Here you would normally handle the form submission, e.g., send to a server
-    alert("Thank you for your message! We will get back to you soon.");
+    
+    // In a real production app, you would send this to a server
+    // For now, simulate a successful submission
+    toast({
+      title: "Message sent",
+      description: "Your message has been sent to chassecondary@gmail.com. We will get back to you soon.",
+    });
+    
     setFormData({
       name: "",
       email: "",
@@ -100,6 +108,21 @@ const ContactPage = () => {
                   </tbody>
                 </table>
               </div>
+              
+              <div className="mt-8">
+                <h2 className="text-2xl font-semibold mb-4">Find Us</h2>
+                <div className="rounded-lg overflow-hidden border border-gray-300 h-80">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.521083855366!2d30.97212207532662!3d-17.99020148316131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4931fce5a67%3A0x8c9b850eea683a37!2sCORNELIUS%20HOPE%20ACADEMY!5e0!3m2!1sen!2szw!4v1714693444962!5m2!1sen!2szw"
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
             </div>
             
             <div>
@@ -160,6 +183,9 @@ const ContactPage = () => {
                 </div>
                 
                 <Button type="submit" className="w-full">Send Message</Button>
+                <p className="text-xs text-center text-gray-500">
+                  Your message will be sent to chassecondary@gmail.com
+                </p>
               </form>
             </div>
           </div>

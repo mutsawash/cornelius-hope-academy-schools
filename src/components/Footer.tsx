@@ -1,141 +1,122 @@
+
 import { NavLink } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white">
-      <div className="container mx-auto px-4 py-8 md:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-800 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/lovable-uploads/7bc2a381-f1f3-42fd-a952-4ddaa51e7a93.png" 
-                alt="Cornelius Hope Academy Logo" 
-                className="h-12 sm:h-14 md:h-16 w-auto bg-white/90 p-1 rounded-md" 
-              />
-              <h3 className="text-lg md:text-xl font-bold">Cornelius Hope Academy</h3>
-            </div>
-            <p className="mb-4">
-              Providing quality education and nurturing excellence since 2007.
-            </p>
-            <div className="flex flex-col">
+            <h3 className="text-xl font-bold mb-4">About Us</h3>
+            <p className="mb-4">Cornelius Hope Academy is a Christian private school providing quality education from pre-school through secondary school in a supportive, faith-based environment.</p>
+            <div className="flex items-center mb-2">
               <a 
                 href="https://vohzimbabwe.com/" 
                 target="_blank" 
-                rel="noopener noreferrer" 
-                className="mb-2 flex items-center gap-2 hover:text-secondary transition-colors"
+                rel="noopener noreferrer"
+                className="flex items-center text-white hover:text-accent transition-colors"
               >
                 <img 
                   src="/lovable-uploads/f6f18ead-09eb-42b4-aa2e-d812b1cb3925.png" 
                   alt="Village of Hope Logo" 
-                  className="h-8 w-auto bg-white/90 p-1 rounded-md" 
+                  className="h-6 w-auto mr-2 bg-white p-0.5 rounded-sm" 
                 />
                 <span>Village of Hope Zimbabwe</span>
               </a>
             </div>
-            <div className="flex space-x-4 mt-4">
-              <a href="https://www.facebook.com/profile.php/?id=61561381671901" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="Twitter">
-                <Twitter size={20} />
-              </a>
-              <a href="https://www.instagram.com/cornelius_hope_academy_/" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-400 transition-colors" aria-label="Instagram">
-                <Instagram size={20} />
-              </a>
-            </div>
           </div>
-
-          <div className="mt-4 sm:mt-0">
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          
+          <div>
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <NavLink to="/" className="hover:text-secondary transition-colors">
-                  Home
-                </NavLink>
+                <NavLink to="/" className="hover:text-primary transition-colors">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/about" className="hover:text-secondary transition-colors">
-                  About Us
-                </NavLink>
+                <NavLink to="/about" className="hover:text-primary transition-colors">About</NavLink>
               </li>
               <li>
-                <NavLink to="/academics" className="hover:text-secondary transition-colors">
-                  Academics
-                </NavLink>
+                <NavLink to="/academics" className="hover:text-primary transition-colors">Academics</NavLink>
               </li>
               <li>
-                <NavLink to="/admissions" className="hover:text-secondary transition-colors">
-                  Admissions
-                </NavLink>
+                <NavLink to="/admissions" className="hover:text-primary transition-colors">Admissions</NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className="hover:text-secondary transition-colors">
-                  Contact
-                </NavLink>
+                <NavLink to="/gallery" className="hover:text-primary transition-colors">Gallery</NavLink>
+              </li>
+              <li>
+                <NavLink to="/alumni" className="hover:text-primary transition-colors">Alumni</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" className="hover:text-primary transition-colors">Contact</NavLink>
               </li>
             </ul>
           </div>
-
-          <div className="mt-4 sm:mt-0">
-            <h3 className="text-lg font-semibold mb-4">Programs</h3>
+          
+          <div>
+            <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-secondary transition-colors">
-                  Primary School
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-secondary transition-colors">
-                  Secondary School
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-secondary transition-colors">
-                  Cambridge Curriculum
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-secondary transition-colors">
-                  ZIMSEC Curriculum
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-secondary transition-colors">
-                  Sports & Clubs
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="mt-4 sm:mt-0">
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <MapPin size={20} className="shrink-0 mt-1" />
+              <li className="flex items-start">
+                <span className="mt-1 mr-2">📍</span>
                 <span>P.O. Box WGT 412 WESTGATE, Harare</span>
               </li>
-              <li className="flex items-start space-x-3">
-                <Phone size={20} className="shrink-0 mt-1" />
-                <div className="flex flex-col">
-                  <a href="tel:+0242003287" className="hover:text-secondary transition-colors">(0242) 00328 97</a>
-                  <a href="tel:+263772855611" className="hover:text-secondary transition-colors">0772 85611</a>
-                  <a href="tel:+263772585706" className="hover:text-secondary transition-colors">0772 585 706</a>
-                </div>
+              <li className="flex items-center">
+                <Phone size={16} className="mr-2" />
+                <a href="tel:+0242003287" className="hover:text-primary transition-colors">(0242) 00328 97</a>
               </li>
-              <li className="flex items-start space-x-3">
-                <Mail size={20} className="shrink-0 mt-1" />
-                <div className="flex flex-col">
-                  <a href="mailto:chaps-primaryschool@gmail.com" className="hover:text-secondary transition-colors break-all">chaps-primaryschool@gmail.com</a>
-                  <a href="mailto:chassecondary@gmail.com" className="hover:text-secondary transition-colors break-all">chassecondary@gmail.com</a>
-                </div>
+              <li className="flex items-center">
+                <Mail size={16} className="mr-2" />
+                <a href="mailto:chassecondary@gmail.com" className="hover:text-primary transition-colors">chassecondary@gmail.com</a>
               </li>
             </ul>
           </div>
+          
+          <div>
+            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a 
+                href="https://www.facebook.com/profile.php/?id=61561381671901" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-500 hover:text-blue-400 transition-colors"
+              >
+                <Facebook size={24} />
+              </a>
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-pink-500 hover:text-pink-400 transition-colors"
+              >
+                <Instagram size={24} />
+              </a>
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                <Twitter size={24} />
+              </a>
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-red-600 hover:text-red-500 transition-colors"
+              >
+                <Youtube size={24} />
+              </a>
+            </div>
+            <div className="mt-6">
+              <p className="text-sm">Office Hours:</p>
+              <p className="text-sm">Monday - Friday: 7:30 AM - 4:30 PM</p>
+            </div>
+          </div>
         </div>
-
-        <div className="border-t border-white/20 mt-8 md:mt-10 pt-6 text-center text-sm md:text-base">
-          <p>&copy; {new Date().getFullYear()} Cornelius Hope Academy. All rights reserved.</p>
+        
+        <div className="mt-12 pt-8 border-t border-gray-700 text-center">
+          <p>&copy; {new Date().getFullYear()} Cornelius Hope Academy Schools. All rights reserved.</p>
         </div>
       </div>
     </footer>

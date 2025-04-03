@@ -15,6 +15,7 @@ const AnnouncementBanner = () => {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [position, setPosition] = useState({ x: 20, y: 120 });
 
   useEffect(() => {
     const storedAnnouncements = localStorage.getItem("schoolAnnouncements");
@@ -39,6 +40,20 @@ const AnnouncementBanner = () => {
     }
   }, [announcements]);
 
+  // Floating animation effect
+  useEffect(() => {
+    if (!visible || announcements.length === 0) return;
+    
+    const floatInterval = setInterval(() => {
+      setPosition(prev => ({
+        x: prev.x + (Math.random() * 2 - 1),
+        y: prev.y + (Math.random() * 2 - 1)
+      }));
+    }, 2000);
+    
+    return () => clearInterval(floatInterval);
+  }, [visible, announcements]);
+
   const closeBanner = () => {
     setVisible(false);
   };
@@ -52,32 +67,45 @@ const AnnouncementBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: -100, opacity: 0 }}
-        className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-3xl mx-auto px-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ 
+          opacity: 1, 
+          y: 0,
+          x: position.x,
+          y: position.y,
+          transition: { 
+            type: "spring",
+            stiffness: 50,
+            damping: 20
+          }
+        }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.3 }}
+        className="fixed z-50 max-w-sm"
+        drag
+        dragConstraints={{ left: 0, right: window.innerWidth - 320, top: 80, bottom: window.innerHeight - 200 }}
       >
-        <div className="bg-accent text-primary p-4 rounded-md shadow-md border border-primary/20">
+        <div className="bg-accent text-primary p-3 rounded-md shadow-lg border border-primary/20">
           <div className="flex justify-between items-start gap-2">
             <div>
-              <h3 className="font-bold text-lg">{currentAnnouncement.title}</h3>
-              <p className="mt-1">{currentAnnouncement.content}</p>
+              <h3 className="font-bold text-sm">{currentAnnouncement.title}</h3>
+              <p className="mt-1 text-xs">{currentAnnouncement.content}</p>
             </div>
             <Button 
               variant="ghost" 
               size="icon" 
               onClick={closeBanner}
-              className="mt-1"
+              className="h-5 w-5 -mt-1 -mr-1"
             >
-              <X className="h-4 w-4" />
+              <X className="h-3 w-3" />
             </Button>
           </div>
           {announcements.length > 1 && (
-            <div className="flex justify-center mt-2 gap-1">
+            <div className="flex justify-center mt-1 gap-1">
               {announcements.map((_, index) => (
                 <span 
                   key={index}
-                  className={`h-2 w-2 rounded-full ${
+                  className={`h-1 w-1 rounded-full ${
                     index === currentIndex ? 'bg-primary' : 'bg-primary/30'
                   }`}
                 />

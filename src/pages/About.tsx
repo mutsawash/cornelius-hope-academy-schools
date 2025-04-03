@@ -11,6 +11,14 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-8 text-primary">About Cornelius Hope Academy</h1>
           
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/604ec598-a305-4eb5-abbc-eef7d299223d.png" 
+              alt="Cornelius Hope Academy Partners" 
+              className="w-full h-auto rounded-lg shadow-lg" 
+            />
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
             <div>
               <p className="text-lg mb-6">
