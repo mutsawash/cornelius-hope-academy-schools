@@ -2,17 +2,33 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import HomeImageCarousel from "@/components/HomeImageCarousel";
+import { lazy, Suspense, useEffect } from "react";
+
+// Lazy load the carousel component
+const HomeImageCarousel = lazy(() => import("@/components/HomeImageCarousel"));
 
 const AlumniPage = () => {
   const alumniRegistrationFormUrl = "https://forms.gle/JwWeSMcVh1MkVkK99";
+  
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
         <div className="py-8 bg-primary text-white text-center relative">
-          <HomeImageCarousel sectionId="alumni-banner" className="absolute inset-0 -z-10" />
+          <div className="absolute inset-0 -z-10">
+            <img 
+              src="/lovable-uploads/50ac236f-e875-4744-8c29-1260d8463564.png"
+              alt="Alumni Background"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-black/50"></div>
+          </div>
           <div id="alumni-banner" className="container mx-auto px-4 relative z-10">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Alumni Registration</h1>
             <p className="text-white/90 max-w-2xl mx-auto">

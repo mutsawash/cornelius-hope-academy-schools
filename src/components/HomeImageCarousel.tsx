@@ -21,7 +21,7 @@ const defaultImages = [
 ];
 
 // Background image for the slideshow
-const backgroundImage = "/lovable-uploads/95e67ba2-a669-4aab-979a-a52566cbd3a9.png";
+const backgroundImage = "/lovable-uploads/f65f6ea2-90dd-45ed-b70c-d14632fe17cb.png";
 
 interface HomeImageCarouselProps {
   sectionId: string;
@@ -37,6 +37,7 @@ const HomeImageCarousel = ({
   const [isVisible, setIsVisible] = useState(false);
   const [api, setApi] = useState<any>(null);
   const [galleryImages, setGalleryImages] = useState<string[]>([]);
+  const [hasLoaded, setHasLoaded] = useState(false);
   
   // Load images from gallery
   useEffect(() => {
@@ -64,14 +65,19 @@ const HomeImageCarousel = ({
     ? [...galleryImages, ...(providedImages || defaultImages)]
     : (providedImages || defaultImages);
   
+  // Implement lazy loading using Intersection Observer
   useEffect(() => {
+    // Create an observer to detect when element enters viewport
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          setHasLoaded(true);
+          // Once visible, no need to observe anymore
+          observer.disconnect();
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: "200px" }); // Load when element is 200px from viewport
     
     const section = document.getElementById(sectionId);
     if (section) {
@@ -111,11 +117,14 @@ const HomeImageCarousel = ({
         <CarouselContent className="h-full">
           {displayImages.map((img, index) => (
             <CarouselItem key={index} className="h-full">
-              <img 
-                src={img} 
-                alt="School images" 
-                className="w-full h-full object-contain max-h-[90vh]"
-              />
+              {(isVisible || hasLoaded) && (
+                <img 
+                  src={img} 
+                  alt="School images" 
+                  className="w-full h-full object-contain max-h-[90vh]"
+                  loading="lazy"
+                />
+              )}
             </CarouselItem>
           ))}
         </CarouselContent>

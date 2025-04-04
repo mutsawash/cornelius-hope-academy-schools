@@ -23,6 +23,7 @@ interface GalleryImage {
 
 const GallerySection = ({ title, category }: GallerySectionProps) => {
   const [images, setImages] = useState<GalleryImage[]>([]);
+  const [visibleImages, setVisibleImages] = useState<Set<string>>(new Set());
   
   useEffect(() => {
     // Fetch images from localStorage based on category
@@ -50,6 +51,36 @@ const GallerySection = ({ title, category }: GallerySectionProps) => {
     };
   }, [category]);
 
+  // Implement intersection observer for lazy loading
+  useEffect(() => {
+    if (!images.length) return;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const imageId = entry.target.getAttribute('data-image-id');
+            if (imageId) {
+              setVisibleImages(prev => new Set([...prev, imageId]));
+              observer.unobserve(entry.target);
+            }
+          }
+        });
+      },
+      { rootMargin: '100px', threshold: 0.1 }
+    );
+    
+    // Find all image placeholders
+    const imagePlaceholders = document.querySelectorAll('.image-placeholder');
+    imagePlaceholders.forEach(placeholder => {
+      observer.observe(placeholder);
+    });
+    
+    return () => {
+      observer.disconnect();
+    };
+  }, [images]);
+
   if (images.length === 0) {
     return (
       <Card className="h-80">
@@ -73,12 +104,20 @@ const GallerySection = ({ title, category }: GallerySectionProps) => {
             {images.map((image) => (
               <CarouselItem key={image.id}>
                 <div className="p-1">
-                  <div className="overflow-hidden rounded-lg">
-                    <img 
-                      src={image.url} 
-                      alt={image.title} 
-                      className="w-full h-64 object-cover"
-                    />
+                  <div 
+                    className="image-placeholder overflow-hidden rounded-lg h-64" 
+                    data-image-id={image.id}
+                  >
+                    {visibleImages.has(image.id) ? (
+                      <img 
+                        src={image.url} 
+                        alt={image.title} 
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gray-200 animate-pulse" />
+                    )}
                   </div>
                   <p className="mt-2 text-center font-medium">{image.title}</p>
                 </div>
