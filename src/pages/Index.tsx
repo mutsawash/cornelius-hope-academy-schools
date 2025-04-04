@@ -99,7 +99,7 @@ const Index = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6 text-primary">Apply Today</h2>
-              <p className="mb-8 text-gray-700">
+              <p className="mb-8 text-white">
                 Give your child the gift of quality education at Cornelius Hope Academy Schools.
                 Our doors are open for admissions for both primary and secondary schools.
               </p>
