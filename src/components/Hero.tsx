@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div className="relative">
       <HomeImageCarousel sectionId="hero-section" className="absolute inset-0 -z-10" />
-      <div className="absolute inset-0 bg-black/30 -z-10"></div>
+      {/* Removed the background overlay with opacity */}
       
       <div id="hero-section" className="container mx-auto px-4 py-20 sm:py-24 md:py-28 lg:py-32 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
@@ -38,9 +38,6 @@ const Hero = () => {
             >
               Apply for Secondary School
             </a>
-            <NavLink to="/about">
-              <Button variant="outline" size="default" className="border-white text-white hover:bg-white/10 text-sm sm:text-base">Learn More</Button>
-            </NavLink>
           </div>
         </div>
       </div>

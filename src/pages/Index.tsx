@@ -42,27 +42,10 @@ const Index = () => {
               Welcome to Cornelius Hope Academy Schools
             </h1>
             <p className="text-white mt-4 max-w-3xl mx-auto">
-              Hope for their Future
+              <span className="text-xs sm:text-sm inline-flex items-center justify-center gap-1 whitespace-nowrap rounded-md bg-accent/80 text-primary px-2 py-1 font-medium">Est. 2007</span> Hope for their Future
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-6">
-            <a 
-              href={primaryEnrollmentFormUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-accent text-primary hover:bg-accent/90 transition-colors h-10 px-4 py-2 text-base md:text-lg font-medium"
-            >
-              Primary School
-            </a>
-            <a 
-              href={enrollmentFormUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-[#BE9E7F] text-white hover:bg-[#BE9E7F]/90 transition-colors h-10 px-4 py-2 text-base md:text-lg font-medium"
-            >
-              Secondary School
-            </a>
-          </div>
+          {/* Removed redundant application buttons here */}
         </div>
       </div>
       <main className="flex-grow">
@@ -112,7 +95,6 @@ const Index = () => {
               className="w-full h-full object-cover" 
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-white/80"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
