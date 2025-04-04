@@ -22,12 +22,11 @@ const AlumniPage = () => {
         <div className="py-8 bg-primary text-white text-center relative">
           <div className="absolute inset-0 -z-10">
             <img 
-              src="/lovable-uploads/13fe2294-688a-4477-a535-9996dc25090a.png"
+              src="/lovable-uploads/5cdb3eda-2c1c-49e3-b7de-6605bd2fcc13.png"
               alt="Alumni Background"
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            {/* Removed the overlay to have 100% opacity */}
           </div>
           <div id="alumni-banner" className="container mx-auto px-4 relative z-10">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Alumni Registration</h1>
