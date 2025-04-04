@@ -42,7 +42,7 @@ const Index = () => {
               Welcome to Cornelius Hope Academy Schools
             </h1>
             <p className="text-white mt-4 max-w-3xl mx-auto">
-              <span className="text-xs sm:text-sm inline-flex items-center justify-center gap-1 whitespace-nowrap rounded-md bg-accent/80 text-primary px-2 py-1 font-medium">Est. 2007</span> Hope for their Future
+              Hope for their Future
             </p>
           </div>
           {/* Removed redundant application buttons here */}
