@@ -72,7 +72,6 @@ const AnnouncementBanner = () => {
           opacity: 1, 
           y: 0,
           x: position.x,
-          y: position.y,
           transition: { 
             type: "spring",
             stiffness: 50,
