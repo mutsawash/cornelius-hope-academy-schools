@@ -20,17 +20,17 @@ const AlumniPage = () => {
       <Header />
       <main className="flex-grow">
         <div className="py-8 bg-primary text-white text-center relative">
-          <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 -z-10 bg-black/30">
             <img 
               src="/lovable-uploads/79dcc45a-e960-48be-8262-b6ea50602b09.png"
               alt="Alumni Background"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-80 mix-blend-overlay"
               loading="lazy"
             />
           </div>
-          <div id="alumni-banner" className="container mx-auto px-4 relative z-10">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">Alumni Registration</h1>
-            <p className="text-white/90 max-w-2xl mx-auto">
+          <div id="alumni-banner" className="container mx-auto px-4 relative z-10 py-8">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 drop-shadow-lg">Alumni Registration</h1>
+            <p className="text-white/90 max-w-2xl mx-auto drop-shadow-md">
               Stay connected with Cornelius Hope Academy
             </p>
           </div>
