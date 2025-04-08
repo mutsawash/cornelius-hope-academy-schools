@@ -51,8 +51,6 @@ const NewsEvents = () => {
     };
   }, []);
 
-  const primaryEnrollmentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfJyrWVQLy7WH6W1xLM0A9QKMo4Ica6_muJh3XzCnJfDFaG7A/viewform";
-
   return (
     <section className="py-10 md:py-16 bg-white/80 backdrop-blur-sm relative z-10">
       <div className="container mx-auto px-4">
@@ -92,9 +90,6 @@ const NewsEvents = () => {
             Take the first step towards providing your child with an exceptional educational experience.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href={primaryEnrollmentFormUrl} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="mb-2">Apply for Primary School</Button>
-            </a>
             <NavLink to="/admissions">
               <Button size="lg" variant="outline">Learn About Admissions</Button>
             </NavLink>
