@@ -22,7 +22,7 @@ const AlumniPage = () => {
         <div className="py-8 bg-primary text-white text-center relative">
           <div className="absolute inset-0 -z-10">
             <img 
-              src="/lovable-uploads/a06211fa-4610-4495-afa7-01981f1a241f.png"
+              src="/lovable-uploads/79dcc45a-e960-48be-8262-b6ea50602b09.png"
               alt="Alumni Background"
               className="w-full h-full object-cover"
               loading="lazy"
