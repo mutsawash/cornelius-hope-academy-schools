@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -128,7 +129,7 @@ const PrimarySchool = () => {
                 >
                   <Button size="lg" className="mb-2">Apply for Primary School</Button>
                 </a>
-                <p className="text-sm text-gray-600 mt-2">Ages 2-13 (Preschool to Grade 7)</p>
+                <p className="text-sm text-gray-600 mt-2">Ages 4-13 (Preschool to Grade 7)</p>
               </div>
             </div>
           </div>
