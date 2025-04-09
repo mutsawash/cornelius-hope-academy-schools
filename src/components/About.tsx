@@ -27,7 +27,7 @@ const About = () => {
               At Cornelius Hope Academy Schools, we believe education goes beyond textbooks and tests. We foster a supportive community where students develop critical thinking skills, emotional intelligence, and a lifelong passion for learning.
             </p>
             <p className="text-gray-600 mb-6">
-              Our holistic approach combines rigorous academics with character development, helping students become not just knowledgeable individuals, but thoughtful, ethical leaders prepared for success in an ever-changing world.
+              Our holistic approach combines rigorous academics with character development, helping students become not just knowledgeable individuals, but thoughtful, spiritually leaders prepared for success in an ever-changing world.
             </p>
             <NavLink to="/about">
               <Button>Learn More About Us</Button>

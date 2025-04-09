@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ClipboardList, DollarSign, GraduationCap } from "lucide-react";
+import { ClipboardList, DollarSign, GraduationCap, Heart, Stethoscope } from "lucide-react";
 import { useEffect } from "react";
 
 const AdmissionsPage = () => {
@@ -67,12 +67,27 @@ const AdmissionsPage = () => {
                   <Card className="border-secondary">
                     <CardHeader className="pb-3">
                       <CardTitle className="flex items-center text-primary">
-                        <GraduationCap className="mr-2 h-5 w-5" /> Secondary School
+                        <GraduationCap className="mr-2 h-5 w-5" /> Secondary School (with Boarding)
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p>Ages 12-19, Form 1 to Form 4 (Grade 8 to Grade 11)</p>
-                      <p className="mt-2">Providing a rigorous academic program that prepares students for higher education.</p>
+                      <p className="mt-2 font-semibold">Full boarding facilities available!</p>
+                      <p className="mt-2">Our secondary school provides a rigorous academic program that prepares students for higher education, with the added benefit of a structured boarding environment.</p>
+                      <div className="mt-4 space-y-3">
+                        <div className="flex items-start">
+                          <Heart className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                          <p><span className="font-semibold">Discipleship Program:</span> Full-time pastors lead Christian development activities</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Stethoscope className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                          <p><span className="font-semibold">On-site Clinic:</span> Qualified medical staff provide healthcare services</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Heart className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                          <p><span className="font-semibold">Psychosocial Support:</span> Dedicated social workers ensure student wellbeing</p>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
@@ -129,9 +144,6 @@ const AdmissionsPage = () => {
                   <ol className="list-decimal pl-5 space-y-2">
                     <li>Submit application form</li>
                     <li>Provide academic records</li>
-                    <li>Teacher recommendations</li>
-                    <li>Entrance assessment</li>
-                    <li>Admissions decision</li>
                   </ol>
                 </CardContent>
               </Card>
