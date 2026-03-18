@@ -1,69 +1,60 @@
-# Welcome to your Lovable project
+# Cornelius Hope Academy Schools
 
-## Project info
+A modern, responsive platform for Cornelius Hope Academy, providing comprehensive information for students, parents, and the community. This project represents the digital home of our school, focusing on excellence in education for both Primary and Secondary levels.
 
-**URL**: https://lovable.dev/projects/92ebbb21-c081-4c28-b07f-a20355df8743
+## 🏫 About the Project
 
-## How can I edit this code?
+The Cornelius Hope Academy website is designed to be a gateway for all stakeholders. It showcases our facilities, values, and academic achievement while providing a seamless process for admissions and communication.
 
-There are several ways of editing your application.
+### Key Sections
+- **Primary School**: Dedicated focus on foundation-level education.
+- **Secondary School**: Advanced learning programs and extracurricular activities.
+- **Admissions**: Detailed information on how to join the Cornelius Hope family.
+- **Gallery**: A visual tour of our campus and events.
+- **Alumni**: Dedicated portal for our past students to stay connected.
 
-**Use Lovable**
+## 🚀 Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/92ebbb21-c081-4c28-b07f-a20355df8743) and start prompting.
+To get a local copy up and running, follow these simple steps.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm
 
-**Use your preferred IDE**
+### Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/mutsawash/cornelius-hope-academy-schools.git
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Install Dependencies**
+   ```sh
+   npm install
+   ```
 
-Follow these steps:
+3. **Start the Development Server**
+   ```sh
+   npm run dev
+   ```
+
+## 🛠️ Built With
+
+- **Vite** - Next Generation Frontend Tooling
+- **React** - A JavaScript library for building user interfaces
+- **TypeScript** - For type-safe development
+- **Tailwind CSS** - For styling and responsive design
+- **shadcn-ui** - Beautifully designed components
+
+## 📦 Deployment
+
+The project is configured for easy deployment via static hosting platforms. For a production build:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+The resulting `dist/` directory can be deployed to Netlify, Vercel, or GitHub Pages.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/92ebbb21-c081-4c28-b07f-a20355df8743) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+---
+© 2026 Cornelius Hope Academy. All rights reserved.
