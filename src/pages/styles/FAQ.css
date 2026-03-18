@@ -1,0 +1,89 @@
+/* ============================================
+   FAQ PAGE
+   ============================================ */
+
+.cha-faq-page {
+  padding-bottom: 120px;
+  background-color: var(--color-white);
+}
+
+.cha-faq__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cha-faq__intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.cha-faq__intro h2 { font-size: 2.2rem; margin-bottom: 16px; }
+.cha-faq__intro p { color: var(--color-text-muted); font-size: 1.1rem; }
+
+/* Accordion */
+.cha-faq__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cha-faq__item {
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  background: var(--color-gray-50);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.cha-faq__item:hover { border-color: var(--color-primary); }
+.cha-faq__item.active { border-color: var(--color-primary); background: var(--color-white); box-shadow: var(--shadow-md); }
+
+.cha-faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 30px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cha-faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cha-faq__item.active .cha-faq__answer {
+  max-height: 500px;
+}
+
+.cha-faq__answer-inner {
+  padding: 0 30px 30px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.cha-faq__icon {
+  transition: transform 0.4s ease;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+.cha-faq__item.active .cha-faq__icon {
+  transform: rotate(180deg);
+}
+
+/* CTA Section */
+.cha-faq__cta {
+  margin-top: 100px;
+  text-align: center;
+  padding: 60px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-xl);
+}
+.cha-faq__cta h3 { font-size: 2rem; margin-bottom: 16px; color: var(--color-accent); }
+.cha-faq__cta p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }

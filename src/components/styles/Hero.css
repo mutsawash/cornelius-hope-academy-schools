@@ -1,0 +1,178 @@
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.cha-hero {
+  position: relative;
+  height: 75vh;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+}
+
+/* The Carousel fills the hero */
+.cha-hero > .cha-carousel {
+  position: absolute;
+  inset: 0;
+  height: 100% !important;
+  z-index: 0;
+}
+
+/* Darker Navy Overlay for better contrast on white text */
+.cha-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(11, 29, 61, 0.9) 0%,
+    rgba(11, 29, 61, 0.45) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* Content Layer */
+.cha-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.cha-hero__inner {
+  max-width: 680px;
+  padding: 0 24px;
+}
+@media (min-width: 1200px) { .cha-hero__inner { margin: 0 auto 0 calc((100vw - 1280px) / 2 + 24px); } }
+
+/* Badge */
+.cha-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 24px;
+  backdrop-filter: blur(4px);
+}
+.cha-hero__badge-dot {
+  width: 8px; height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+/* Title - Now using Serif */
+.cha-hero__title {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-family: var(--font-serif);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.cha-hero__title span {
+  color: var(--color-primary);
+  font-style: italic;
+  display: block;
+}
+
+/* Subtitle */
+.cha-hero__subtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 580px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Actions */
+.cha-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.cha-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 28px;
+  height: 52px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition);
+  letter-spacing: 0.02em;
+  border: 2px solid transparent;
+}
+
+.cha-hero__btn--primary {
+  background: var(--color-accent);
+  color: var(--color-text);
+}
+.cha-hero__btn--primary:hover { background: #ffd400; }
+
+.cha-hero__btn--outline {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border-color: rgba(255,255,255,0.35);
+  backdrop-filter: blur(6px);
+}
+.cha-hero__btn--outline:hover {
+  background: #fff;
+  color: var(--color-text);
+  border-color: #fff;
+}
+
+/* Stats */
+.cha-hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cha-hero__stat {
+  display: flex;
+  flex-direction: column;
+}
+.cha-hero__stat-value {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+.cha-hero__stat-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: rgba(255,255,255,0.55);
+  margin-top: 3px;
+}
+.cha-hero__stat-divider {
+  width: 1px; height: 36px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* Bottom Fade */
+.cha-hero__fade {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to top, #fff 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}

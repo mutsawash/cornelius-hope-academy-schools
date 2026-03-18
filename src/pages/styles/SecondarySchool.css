@@ -1,0 +1,97 @@
+/* ============================================
+   SECONDARY SCHOOL SPECIFIC STYLES 
+   ============================================ */
+
+.cha-secondary-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.cha-secondary-boarding-box {
+  background: var(--color-gray-50);
+  border-radius: var(--radius-2xl);
+  padding: 60px 40px;
+  margin-bottom: 60px;
+  text-align: center;
+  border: 1px solid var(--color-gray-100);
+}
+
+.cha-secondary-boarding-box h2 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  margin-bottom: 30px;
+}
+
+
+.cha-secondary-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .cha-secondary-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cha-secondary-feature-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 40px 30px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-gray-100);
+  transition: var(--transition);
+}
+
+.cha-secondary-feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-accent);
+}
+
+.cha-secondary-feature-card svg {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  background: var(--color-gray-50);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.cha-secondary-feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.cha-secondary-feature-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.cha-secondary-desc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .cha-secondary-boarding-box { padding: 40px 20px; }
+  .cha-secondary-boarding-box h2 { font-size: 2rem; }
+}
+

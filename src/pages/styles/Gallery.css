@@ -1,0 +1,24 @@
+/* ============================================
+   GALLERY PAGE
+   ============================================ */
+
+.cha-gallery-page {
+  padding-bottom: 120px;
+  background-color: var(--color-white);
+}
+
+.cha-gallery-page__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.cha-gallery-page__section-wrap {
+  animation: fade-in-up 0.8s ease forwards;
+}
+
+/* Specific section spacing adjustment if needed */
+.cha-gallery-section {
+  margin-top: 40px;
+}
+

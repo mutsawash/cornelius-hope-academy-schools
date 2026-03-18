@@ -1,0 +1,109 @@
+/* ============================================
+   HOME PAGE (INDEX) SPECIFIC STYLES
+   ============================================ */
+
+.cha-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.cha-page main { flex: 1; }
+
+/* Home About Split Section */
+.cha-home-about {
+  padding: 96px 0;
+  background: #fdfaf5;
+  position: relative;
+  overflow: hidden;
+}
+.cha-home-about__dot-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #004A3C 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.025;
+  pointer-events: none;
+}
+.cha-home-about__container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .cha-home-about__container {
+    flex-direction: row;
+    gap: 96px;
+  }
+}
+
+/* Image Column */
+.cha-home-about__image-col {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+}
+@media (min-width: 1024px) { .cha-home-about__image-col { width: 480px; } }
+
+.cha-home-about__border-frame {
+  position: absolute;
+  top: 24px;
+  right: -24px;
+  bottom: -24px;
+  left: 0;
+  border: 2px solid var(--color-primary);
+  z-index: 0;
+  display: none;
+}
+@media (min-width: 1024px) { .cha-home-about__border-frame { display: block; } }
+
+.cha-home-about__image-wrapper {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 8px;
+  box-shadow: var(--shadow-xl);
+  height: 420px;
+}
+.cha-home-about__image {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content Column */
+.cha-home-about__content {
+  flex: 1;
+}
+.cha-home-about__label {
+  display: block;
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+.cha-home-about__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900; line-height: 1.15;
+  color: #0e1d34;
+  margin-bottom: 24px;
+}
+.cha-home-about__desc {
+  font-size: 1rem;
+  color: var(--color-gray-600);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.cha-home-about__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 20px;
+  background: #0b1627; color: #fff;
+  padding: 14px 28px;
+  font-size: 0.85rem; font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+.cha-home-about__btn:hover { background: var(--color-primary); }

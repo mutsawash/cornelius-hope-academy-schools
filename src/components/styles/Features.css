@@ -1,0 +1,74 @@
+/* ============================================
+   FEATURES SECTION
+   ============================================ */
+
+.cha-features {
+  padding: 96px 0;
+  background: #fff;
+}
+
+.cha-features__header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 64px;
+}
+.cha-features__header .section-subtitle { margin: 0 auto; }
+
+.cha-features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 640px)  { .cha-features__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cha-features__grid { grid-template-columns: repeat(3, 1fr); } }
+
+.cha-features__card {
+  background: #fdfaf5;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-slow);
+}
+.cha-features__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.cha-features__card::after {
+  content: '';
+  position: absolute;
+  bottom: -30px; right: -30px;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  transition: transform 0.6s ease;
+}
+.cha-features__card--primary::after { background: rgba(11,61,46,0.04); }
+.cha-features__card--accent::after  { background: rgba(240,196,0,0.08); }
+.cha-features__card:hover::after { transform: scale(1.8); }
+
+.cha-features__icon-wrap {
+  width: 58px; height: 58px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+.cha-features__card:hover .cha-features__icon-wrap { transform: scale(1.1) rotate(3deg); }
+
+.cha-features__icon-wrap--primary { background: rgba(11,61,46,0.08); color: var(--color-primary); }
+.cha-features__icon-wrap--accent  { background: rgba(240,196,0,0.12); color: #9a7a00; }
+
+.cha-features__card-title {
+  font-size: 1.2rem; font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  transition: var(--transition);
+}
+.cha-features__card:hover .cha-features__card-title { color: var(--color-accent); }
+
+.cha-features__card-desc {
+  font-size: 0.92rem;
+  color: var(--color-gray-600);
+  line-height: 1.7;
+}
