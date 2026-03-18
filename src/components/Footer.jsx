@@ -59,8 +59,9 @@ const Footer = () => {
             <li className="cha-footer__contact-item">
               <div className="cha-footer__contact-icon"><Phone size={18} /></div>
               <div>
-                <p className="cha-footer__contact-label">Phone</p>
-                <a href="tel:+2632420032897" className="cha-footer__contact-text cha-footer__contact-link">(0242) 00328 97</a>
+                <p className="cha-footer__contact-label">Phone Lines</p>
+                <a href="tel:+263789242260" className="cha-footer__contact-text cha-footer__contact-link">CHAPS: 0789 242 260</a>
+                <a href="tel:+263789668344" className="cha-footer__contact-text cha-footer__contact-link">CHASS: 0789 668 344</a>
               </div>
             </li>
             <li className="cha-footer__contact-item">

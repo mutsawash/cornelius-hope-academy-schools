@@ -33,8 +33,11 @@ const Header = () => {
       <div className="cha-topbar">
         <div className="container cha-topbar__inner">
           <div className="cha-topbar__contact">
-            <a href="tel:+2632420032897" className="cha-topbar__link">
-              <Phone size={14} /> <span>(0242) 00328 97</span>
+            <a href="tel:+263789242260" className="cha-topbar__link">
+              <Phone size={14} /> <span>CHAPS: 0789 242 260</span>
+            </a>
+            <a href="tel:+263789668344" className="cha-topbar__link">
+              <Phone size={14} /> <span>CHASS: 0789 668 344</span>
             </a>
             <a href="mailto:info@corneliushope.ac.zw" className="cha-topbar__link">
               <Mail size={14} /> <span>info@corneliushope.ac.zw</span>
@@ -126,8 +129,11 @@ const Header = () => {
               </a>
             </div>
             <div className="cha-drawer__contact">
-              <a href="tel:+2632420032897" className="cha-drawer__contact-link">
-                <Phone size={16} /> (0242) 00328 97
+              <a href="tel:+263789242260" className="cha-drawer__contact-link">
+                <Phone size={16} /> CHAPS: 0789 242 260
+              </a>
+              <a href="tel:+263789668344" className="cha-drawer__contact-link">
+                <Phone size={16} /> CHASS: 0789 668 344
               </a>
               <a href="mailto:info@corneliushope.ac.zw" className="cha-drawer__contact-link">
                 <Mail size={16} /> info@corneliushope.ac.zw

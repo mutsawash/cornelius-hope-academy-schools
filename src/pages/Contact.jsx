@@ -41,9 +41,11 @@ const ContactPage = () => {
       icon: <Phone size={24} />,
       title: 'Phone Numbers',
       lines: [
-        { label: 'Admin', val: '(0242) 00328 97', link: 'tel:+02420032897' },
-        { label: 'Primary', val: '0772 856 111', link: 'tel:+263772855611' },
-        { label: 'Secondary', val: '0772 585 706', link: 'tel:+263772585706' }
+        { label: 'Admin', val: '(0242) 00328 97', link: 'tel:+2632420032897' },
+        { label: 'CHAPS (Primary)', val: '0789 242 260', link: 'tel:+263789242260' },
+        { label: 'CHASS (Secondary)', val: '0789 668 344', link: 'tel:+263789668344' },
+        { label: 'Mr Kufakwatenzi (Primary Head)', val: '0772 856 114', link: 'tel:+263772856114' },
+        { label: 'Mrs Maparura (Secondary Head)', val: '0772 585 706', link: 'tel:+263772585706' }
       ]
     },
     {
